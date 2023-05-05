@@ -1,0 +1,93 @@
+# OS generated files #
+######################
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# OSX
+# =========================
+
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+
+# Sass cache #
+##############
+
+.sass-cache
+*.scssc
+
+
+# Code editor folders or files #
+######################################
+
+.cache
+.project
+.settings
+.tmproj
+*.esproj
+nbproject
+*.komodoproject
+.komodotools
+_notes
+dwsync.xml
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+.vscode
+
+
+# Development Files and Folders #
+#####################
+
+.tmp/
+node_modules/
+gulpfile.js
+package.json
+package-lock.json
+.eslintrc.js
+
+
+# Misc files #
+########################
+
+*.diff
+*.err
+*.orig
+*.log
+*.rej
+*.swo
+*.swp
+*.vi
+*~
