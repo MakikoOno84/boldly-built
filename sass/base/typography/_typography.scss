@@ -6,9 +6,22 @@ optgroup,
 textarea {
 	color: $color__text-main;
 	font-family: $font__main;
-	font-size: 1rem;
+	font-size: $font__mobile_body;
 	line-height: $font__line-height-body;
 }
 
 @import "headings";
 @import "copy";
+
+
+// Font Size for screen size greated than 768px
+@media (min-width: 768px) {
+	body,
+	button,
+	input,
+	select,
+	optgroup,
+	textarea {
+		font-size: $font__desktop_body;
+	}
+}

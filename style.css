@@ -388,21 +388,51 @@ input,
 select,
 optgroup,
 textarea {
-	color: #404040;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	color: #677589;
+	font-family: "Alegreya", serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-size: 1rem;
 	line-height: 1.5;
 }
 
-h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
+	font-size: 1.2rem;
 	clear: both;
+	font-family: "Alegreya Sans", sans-serif;
+	color: #002D62;
 }
 
+h1 {
+	font-family: "Alegreya Sans", sans-serif;
+	font-size: 1.3rem;
+	clear: both;
+	color: #002D62;
+}
+
+.h1 {
+	font-family: "Alegreya Sans", sans-serif;
+	font-size: 1.3rem;
+	font-weight: bold;
+}
+
+@media (min-width: 768px) {
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-size: 1.3rem;
+	}
+	h1 {
+		font-size: 1.5rem;
+	}
+	.h1 {
+		font-size: 1.5rem;
+	}
+}
 p {
 	margin-bottom: 1.5em;
 }
@@ -455,6 +485,16 @@ big {
 	font-size: 125%;
 }
 
+@media (min-width: 768px) {
+	body,
+	button,
+	input,
+	select,
+	optgroup,
+	textarea {
+		font-size: 1.1rem;
+	}
+}
 /* Elements
 --------------------------------------------- */
 body {
@@ -615,6 +655,25 @@ textarea {
 /*--------------------------------------------------------------
 # Layouts
 --------------------------------------------------------------*/
+.site {
+	display: grid;
+	grid-template-columns: 1fr minmax(0, 1920px) 1fr;
+	grid-template-areas: ". header ." ". main. " ". footer .";
+	background-color: #F5FEFD;
+}
+
+.site-header {
+	grid-area: header;
+}
+
+.site-main {
+	grid-area: main;
+}
+
+.site-footer {
+	grid-area: footer;
+}
+
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
