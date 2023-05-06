@@ -16,21 +16,23 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
+		<?php if ( have_rows('ux_research') ) : ?>
+				<?php while ( have_rows('ux_research') ) : the_row(); ?>
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
+					<?php $step = get_sub_field('step');
+						$title = get_sub_field('title');
+						$description = get_sub_field('description');
+						$image = get_sub_field('image'); ?>
 
-			get_template_part( 'template-parts/content', 'page' );
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-		endwhile; // End of the loop.
-		?>
-
+					<section class='<?php echo $title?>'>
+						<p>0<?php echo $step?></p>
+						<h3><?php echo $title?></h3>
+						<p><?php echo $description?></p>
+						<?php echo wp_get_attachment_image( $image, 'full')?>
+					</section>
+					
+				<?php endwhile ?>
+		<?php endif ?>
 	</main><!-- #main -->
 
 <?php
