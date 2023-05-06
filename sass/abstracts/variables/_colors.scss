@@ -1,3 +1,11 @@
+// BOLDLY BUILT VARIABLES - START HERE
+$white: #F5FEFD;
+$grey: #677589;
+$blue: #002D62;
+$lightBlue: #475F9B;
+$lightBlack: #23252C; 
+
+// UNDERSCORES GENERIC VARIABLES
 $color__background-body: #fff;
 $color__background-screen: #f1f1f1;
 $color__background-hr: #ccc;
@@ -11,7 +19,7 @@ $color__text-input-focus: #111;
 $color__link: #4169e1; //royalblue
 $color__link-visited: #800080; //purple
 $color__link-hover: #191970; //midnightblue
-$color__text-main: #404040;
+$color__text-main: $grey;
 
 $color__border-button: #ccc #ccc #bbb;
 $color__border-button-hover: #ccc #bbb #aaa;

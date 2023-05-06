@@ -1,0 +1,21 @@
+.site {
+	display: grid;
+	grid-template-columns: 1fr minmax(0, 1920px) 1fr;
+	grid-template-areas:
+		". header ."
+		". main. "
+		". footer .";
+	background-color: $white;
+	}
+
+.site-header {
+	grid-area: header;
+};
+	
+.site-main {
+	grid-area: main;
+};
+	
+.site-footer {
+	grid-area: footer;
+};
