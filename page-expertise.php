@@ -16,23 +16,114 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
-		<?php if ( have_rows('ux_research') ) : ?>
+		<!-- technologies used -->
+		<section id='technologies'>
+
+			<?php if ( have_rows('tech_used') ) : ?>
+				<?php while ( have_rows('tech_used') ) : the_row(); ?>
+
+					<?php 	$groupHeading = get_sub_field('group_heading');
+							$techOne 	  = get_sub_field('tech_one');
+							$techTwo	  = get_sub_field('tech_two');
+							$techThree 	  = get_sub_field('tech_three'); ?>
+
+						<h2><?php echo $groupHeading ?></h2>
+						<p><?php echo $techOne ?></p>
+						<p><?php echo $techTwo ?></p>
+						<p><?php echo $techThree ?></p>
+
+				<?php endwhile ?>
+			<?php endif ?>
+		<!-- end of technologies used -->
+		</section>
+
+		<!-- 4 essential steps to development section -->
+		<section id='developmentStep'>
+
+			<!-- outputting headings for the steps -->
+			<?php if ( get_field('step_heading') ) : ?>
+				<h2><?php the_field('step_heading')?></h2>
+			<?php endif ?>
+
+			<!-- looping the group field and outputting content for step 1 ux-research  -->
+			<?php if ( have_rows('ux_research') ) : ?>
 				<?php while ( have_rows('ux_research') ) : the_row(); ?>
 
-					<?php $step = get_sub_field('step');
-						$title = get_sub_field('title');
-						$description = get_sub_field('description');
-						$image = get_sub_field('image'); ?>
+					<?php 	$step = get_sub_field('step');
+							$title = get_sub_field('title');
+							$description = get_sub_field('description');
+							$image = get_sub_field('image'); ?>
 
-					<section class='<?php echo $title?>'>
+					<section class='step<?php echo $step?> steps'>
+							<p>0<?php echo $step?></p>
+							<h3><?php echo $title?></h3>
+							<p><?php echo $description?></p>
+							<?php echo wp_get_attachment_image( $image, 'full') ?>
+					</section>
+
+				<?php endwhile ?>
+			<?php endif ?>
+
+			<!-- looping the group field and outputting content for step 2 ux-strategy -->
+			<?php if ( have_rows('ux_strategy') ) : ?>
+				<?php while ( have_rows('ux_strategy') ) : the_row(); ?>
+
+					<?php 	$step = get_sub_field('step');
+							$title = get_sub_field('title');
+							$description = get_sub_field('description');
+							$image = get_sub_field('image'); ?>
+					
+					<section class='step<?php echo $step ?> steps'>
 						<p>0<?php echo $step?></p>
 						<h3><?php echo $title?></h3>
 						<p><?php echo $description?></p>
-						<?php echo wp_get_attachment_image( $image, 'full')?>
+						<?php echo wp_get_attachment_image( $image, 'full') ?>
 					</section>
-					
+
 				<?php endwhile ?>
-		<?php endif ?>
+			<?php endif ?>
+
+			<!-- looping the group field and outputting content for step 3 ux-design -->
+			<?php if ( have_rows('ux_design') ) : ?>
+				<?php while ( have_rows('ux_design') ) : the_row(); ?>
+
+					<?php 	$step = get_sub_field('step');
+							$title = get_sub_field('title');
+							$description = get_sub_field('description');
+							$image = get_sub_field('image'); ?>
+					
+					<section class='step<?php echo $step ?> steps'>
+						<p>0<?php echo $step?></p>
+						<h3><?php echo $title?></h3>
+						<p><?php echo $description?></p>
+						<?php echo wp_get_attachment_image( $image, 'full') ?>
+					</section>
+
+				<?php endwhile ?>
+			<?php endif ?>
+
+			<!-- looping the group field and outputting content for step 4 web-design -->
+			<?php if ( have_rows('web_design') ) : ?>
+				<?php while ( have_rows('web_design') ) : the_row(); ?>
+
+					<?php 	$step = get_sub_field('step');
+							$title = get_sub_field('title');
+							$description = get_sub_field('description');
+							$image = get_sub_field('image'); ?>
+					
+					<section class='step<?php echo $step ?> steps'>
+						<p>0<?php echo $step?></p>
+						<h3><?php echo $title?></h3>
+						<p><?php echo $description?></p>
+						<?php echo wp_get_attachment_image( $image, 'full') ?>
+					</section>
+
+				<?php endwhile ?>
+			<?php endif ?>
+		<!-- end of steps section-->
+		</section>
+		
+						
 	</main><!-- #main -->
 
 <?php
