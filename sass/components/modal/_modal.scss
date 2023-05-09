@@ -1,0 +1,123 @@
+/* Simple page styles */
+// * {
+//     box-sizing: border-box;
+//     font-family: sans-serif;
+//     padding: 0;
+//     margin: 0;
+//   }
+  
+//   .sample {
+//     padding: 2rem;
+//     text-align: center;
+//   }
+  
+//   p {
+//     line-height: 1.6;
+//     margin-top: 1rem;
+//   }
+  
+//   a {
+//     color: #000;
+//     display: block;
+//     font-weight: 600;
+//     margin-top: 2rem;
+//     text-decoration: none;
+//     text-transform: uppercase;
+//   }
+  
+//   button {
+//     background: transparent;
+//     border: 0;
+//     color: #666;
+//     cursor: pointer;
+//     display: inline-block;
+//     font-size: 1rem;
+//     font-weight: bold;
+//     padding: 0 1rem;
+//     text-transform: uppercase;
+  
+//     &:hover {
+//       color: #111;
+//     }
+  
+//     &.open-modal {
+//       background: #000;
+//       border-radius: 5px;
+//       color: #fff;
+//       display: inline-block;
+//       margin: 1rem 0.5rem;
+//       padding: 1rem;
+//     }
+//   }
+
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 2rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease;
+  
+    .modal-backdrop {
+      background: rgba(#000, 0.7);
+      height: 100%;
+      width: 100%;
+      position: fixed;
+    }
+  
+    .modal-content {
+      background: #fff;
+      border-radius: 5px;
+      max-width: 600px;
+      position: fixed;
+      top: -100%;
+      transition: all 0.6s ease;
+      z-index: 1000;
+    }
+  
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ccc;
+      padding: 1.5rem;
+  
+      .close-modal {
+        font-size: 2rem;
+        padding: 0;
+        margin: 0;
+        height: 30px;
+        width: 30px;
+        text-align: center;
+  
+        &:hover {
+          color: #000;
+        }
+      }
+    }
+  
+    .modal-body {
+      padding: 1.5rem;
+    }
+  
+    .modal-footer {
+      border-top: 1px solid #ccc;
+      padding: 1rem;
+      text-align: right;
+    }
+  
+    &.visible {
+      opacity: 1;
+      visibility: visible;
+  
+      .modal-content {
+        top: 25%;
+      }
+    }
+  }
+  
