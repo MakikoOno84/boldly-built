@@ -22,6 +22,31 @@ get_header();
 			<?php endif ?>
 		</section>
 
+		<section id="home-feature">
+			<?php if ( get_field('featured_title') ) : ?>
+				<h2><?php the_field('featured_title')?></h2>
+			<?php endif ?>
+
+			<?php if ( get_field('project_title') ) : ?>
+				<h3><?php the_field('project_title')?></h3>
+			<?php endif ?>
+
+			<?php if ( get_field('project_description') ) : ?>
+				<p><?php the_field('project_description')?></p>
+			<?php endif ?>
+
+			<?php 
+				$image = get_field('project_image');
+				$size = 'large'; 
+				if( $image ) {
+					echo wp_get_attachment_image( $image, $size );
+				}
+			 ?>
+
+			<?php if ( get_field('live_site_link') ) : ?>
+				<a href="<?php the_field('live_site_link')?>" target=”_blank”>Live Site</a>
+			<?php endif ?>
+		</section>
 
 	</main><!-- #main -->
 
