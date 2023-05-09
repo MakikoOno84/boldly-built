@@ -30,7 +30,9 @@ get_header();
 
 		endwhile; // End of the loop.
 		?>
-
+		
+		<!-- calling contact us template part -->
+		<?php get_template_part( 'template-parts/contact-us' ); ?>
 	</main><!-- #main -->
 
 <?php

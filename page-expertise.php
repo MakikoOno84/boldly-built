@@ -123,7 +123,8 @@ get_header();
 		<!-- end of steps section-->
 		</section>
 		
-						
+		<!-- calling contact us template part -->
+		<?php get_template_part( 'template-parts/contact-us' ); ?>
 	</main><!-- #main -->
 
 <?php
