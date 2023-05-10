@@ -142,9 +142,10 @@ function boldly_built_scripts() {
 	wp_style_add_data( 'boldly-built-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'boldly-built-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'boldly-built-modal', get_template_directory_uri() . '/js/modal.js', array(), _S_VERSION, true );
 
 	// loading google fonts
-	wp_enqueue_style( 'boldly-built-fonts', 'https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@900&family=Alegreya:ital@0;1&display=swap', array(), null );
+	wp_enqueue_style( 'boldly-built-fonts', 'https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@700;900&family=Alegreya:ital@0;1&display=swap', array(), null );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
