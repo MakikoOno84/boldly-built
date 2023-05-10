@@ -887,6 +887,36 @@ textarea {
 
 /* Pages
 --------------------------------------------- */
+.step-heading {
+	font-size: 3rem;
+	text-align: center;
+	text-transform: capitalize;
+}
+
+.step-icon,
+.step-subheading,
+.step-description {
+	text-align: center;
+}
+
+.step-icon {
+	background-color: #002D62;
+	width: 60px;
+	height: 60px;
+	margin: 0 auto;
+	border-radius: 20%;
+}
+
+.step-icon > p {
+	color: #F5FEFD;
+	font-size: 2rem;
+	margin: 0;
+}
+
+.step-image {
+	display: none;
+}
+
 /* Template Parts
 --------------------------------------------- */
 #contact-us {

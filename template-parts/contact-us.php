@@ -10,7 +10,7 @@
 ?>
 <section id='contact-us'>
     <h2 class='contact-heading'><span class='contact-text'>Get In<br></span> <span class='contact-text-two'>Touch</span></h2>
-    <button type='button' class='contact-btn'>Contact Us</button>
+    <button type='button' class='contact-btn open-modal'>Contact Us</button>
 </section>
 
 
