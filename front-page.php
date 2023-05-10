@@ -16,20 +16,37 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
+		<section id="home-expertise">
+			<?php if ( get_field('home_section_title_') ) : ?>
+				<h2><?php the_field('home_section_title_')?></h2>
+			<?php endif ?>
+		</section>
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
+		<section id="home-feature">
+			<?php if ( get_field('featured_title') ) : ?>
+				<h2><?php the_field('featured_title')?></h2>
+			<?php endif ?>
 
-			get_template_part( 'template-parts/content', 'page' );
+			<?php if ( get_field('project_title') ) : ?>
+				<h3><?php the_field('project_title')?></h3>
+			<?php endif ?>
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+			<?php if ( get_field('project_description') ) : ?>
+				<p><?php the_field('project_description')?></p>
+			<?php endif ?>
 
-		endwhile; // End of the loop.
-		?>
+			<?php 
+				$image = get_field('project_image');
+				$size = 'large'; 
+				if( $image ) {
+					echo wp_get_attachment_image( $image, $size );
+				}
+			 ?>
+
+			<?php if ( get_field('live_site_link') ) : ?>
+				<a href="<?php the_field('live_site_link')?>" target=”_blank”>Live Site</a>
+			<?php endif ?>
+		</section>
 
 		<!-- calling contact us template part -->
 		<?php get_template_part( 'template-parts/contact-us' ); ?>
