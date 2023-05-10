@@ -668,8 +668,6 @@ textarea {
 
 .site-main {
 	grid-area: main;
-	margin-left: auto;
-	margin-right: auto;
 }
 
 .site-footer {
@@ -887,6 +885,89 @@ textarea {
 	display: block;
 }
 
+/* Pages
+--------------------------------------------- */
+/* Template Parts
+--------------------------------------------- */
+#contact-us {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	align-items: center;
+	max-width: 1440px;
+	margin: 0 auto;
+}
+
+#contact-us::before {
+	content: "";
+	display: inline-block;
+	background-image: url("http://localhost:8888/boldlybuilt/wp-content/uploads/2023/05/contact-img-large.jpg");
+	background-size: cover;
+	background-position: bottom;
+	width: 100%;
+	height: 200px;
+}
+
+.contact-heading {
+	font-size: 4.5rem;
+	text-transform: uppercase;
+	position: relative;
+	bottom: 75px;
+	text-align: center;
+	line-height: 3.5rem;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.contact-text {
+	color: #677589;
+}
+
+.contact-btn {
+	position: relative;
+	top: -75px;
+	color: #F5FEFD;
+	background: #002D62;
+	border: 0;
+	border-radius: 50%;
+	height: 100px;
+	width: 100px;
+	text-transform: uppercase;
+	font-family: "Alegreya Sans", sans-serif;
+	text-align: center;
+}
+
+@media (min-width: 768px) {
+	.contact-btn {
+		top: -150px;
+		right: 225px;
+	}
+	.contact-heading {
+		font-size: 7rem;
+	}
+	.contact-text {
+		position: relative;
+		right: 10%;
+		top: -25px;
+	}
+	.contact-text-two {
+		position: relative;
+		left: 40%;
+	}
+	#contact-us::before {
+		height: 250px;
+	}
+}
+@media (min-width: 1024px) {
+	#contact-us::before {
+		height: 325px;
+	}
+	.contact-btn {
+		height: 150px;
+		width: 150px;
+		font-size: 1.5rem;
+	}
+}
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/
