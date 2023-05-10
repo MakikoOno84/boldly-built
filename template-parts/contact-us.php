@@ -8,11 +8,9 @@
  */
 
 ?>
-
 <section id='contact-us'>
-    <h2>Get In Touch</h2>
-    <img src="<?php echo get_template_directory_uri() ?>/images/contact-img.jpg" alt="picture of overhead shot of laptops and notes">
-    <button type='button' class='contact-btn open-modal' data-modal-target="modal1">Contact Us</button>
+    <h2 class='contact-heading'><span class='contact-text'>Get In<br></span> <span class='contact-text-two'>Touch</span></h2>
+    <button type='button' class='contact-btn'>Contact Us</button>
 </section>
 
 
