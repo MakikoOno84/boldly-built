@@ -60,9 +60,11 @@ get_header();
 								$image = get_sub_field('image'); ?>
 
 						<section class='step<?php echo $step?> steps'>
-								<div class='step-icon'><p>0<?php echo $step?></p></div>
-								<h3 class='step-subheading'><?php echo $title?></h3>
-								<p class='step-description'><?php echo $description?></p>
+								<section>
+									<div class='step-icon'><p>0<?php echo $step?></p></div>
+									<h3 class='step-subheading'><?php echo $title?></h3>
+									<p class='step-description'><?php echo $description?></p>
+								</section>
 								<?php echo wp_get_attachment_image( $image, 'full', '', array('class' => 'step-image attachment-full size-full')) ?>
 						</section>
 
@@ -81,9 +83,11 @@ get_header();
 								$image = get_sub_field('image'); ?>
 						
 						<section class='step<?php echo $step ?> steps'>
-								<div class='step-icon'><p>0<?php echo $step?></p></div>
-								<h3 class='step-subheading'><?php echo $title?></h3>
-								<p class='step-description'><?php echo $description?></p>
+								<section>
+									<div class='step-icon'><p>0<?php echo $step?></p></div>
+									<h3 class='step-subheading'><?php echo $title?></h3>
+									<p class='step-description'><?php echo $description?></p>
+								</section>
 								<?php echo wp_get_attachment_image( $image, 'full', '', array('class' => 'step-image attachment-full size-full')) ?>
 						</section>
 
@@ -102,9 +106,11 @@ get_header();
 								$image = get_sub_field('image'); ?>
 						
 						<section class='step<?php echo $step ?> steps'>
-								<div class='step-icon'><p>0<?php echo $step?></p></div>
-								<h3 class='step-subheading'><?php echo $title?></h3>
-								<p class='step-description'><?php echo $description?></p>
+								<section>
+									<div class='step-icon'><p>0<?php echo $step?></p></div>
+									<h3 class='step-subheading'><?php echo $title?></h3>
+									<p class='step-description'><?php echo $description?></p>
+								</section>
 								<?php echo wp_get_attachment_image( $image, 'full', '', array('class' => 'step-image attachment-full size-full')) ?>
 						</section>
 
@@ -123,9 +129,11 @@ get_header();
 								$image = get_sub_field('image'); ?>
 						
 						<section class='step<?php echo $step ?> steps'>
-								<div class='step-icon'><p>0<?php echo $step?></p></div>
-								<h3 class='step-subheading'><?php echo $title?></h3>
-								<p class='step-description'><?php echo $description?></p>
+								<section>
+									<div class='step-icon'><p>0<?php echo $step?></p></div>
+									<h3 class='step-subheading'><?php echo $title?></h3>
+									<p class='step-description'><?php echo $description?></p>
+								</section>
 								<?php echo wp_get_attachment_image( $image, 'full', '', array('class' => 'step-image attachment-full size-full')) ?>
 						</section>
 
