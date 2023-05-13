@@ -20,6 +20,7 @@ get_header();
 			<?php if ( get_field('home_section_title_') ) : ?>
 				<h2><?php the_field('home_section_title_')?></h2>
 			<?php endif ?>
+
 		</section>
 
 		<section id="home-feature">
