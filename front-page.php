@@ -16,41 +16,50 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
-		<section id="home-expertise">
-			<?php if ( get_field('home_section_title_') ) : ?>
-				<h2><?php the_field('home_section_title_')?></h2>
-			<?php endif ?>
 
-		</section>
+		<!-- banner image -->
+		<?php get_template_part( 'template-parts/banner', 'image' ); ?>
 
-		<section id="home-feature">
-			<?php if ( get_field('featured_title') ) : ?>
-				<h2><?php the_field('featured_title')?></h2>
-			<?php endif ?>
+		<!-- page wrapper: start-->
+		<div class='page-wrapper'>
 
-			<?php if ( get_field('project_title') ) : ?>
-				<h3><?php the_field('project_title')?></h3>
-			<?php endif ?>
+			<section id="home-expertise">
+				<?php if ( get_field('home_section_title_') ) : ?>
+					<h2><?php the_field('home_section_title_')?></h2>
+				<?php endif ?>
 
-			<?php if ( get_field('project_description') ) : ?>
-				<p><?php the_field('project_description')?></p>
-			<?php endif ?>
+			</section>
 
-			<?php 
-				$image = get_field('project_image');
-				$size = 'large'; 
-				if( $image ) {
-					echo wp_get_attachment_image( $image, $size );
-				}
-			 ?>
+			<section id="home-feature">
+				<?php if ( get_field('featured_title') ) : ?>
+					<h2><?php the_field('featured_title')?></h2>
+				<?php endif ?>
 
-			<?php if ( get_field('live_site_link') ) : ?>
-				<a href="<?php the_field('live_site_link')?>" target=”_blank”>Live Site</a>
-			<?php endif ?>
-		</section>
+				<?php if ( get_field('project_title') ) : ?>
+					<h3><?php the_field('project_title')?></h3>
+				<?php endif ?>
 
-		<!-- calling contact us template part -->
-		<?php get_template_part( 'template-parts/contact-us' ); ?>
+				<?php if ( get_field('project_description') ) : ?>
+					<p><?php the_field('project_description')?></p>
+				<?php endif ?>
+
+				<?php 
+					$image = get_field('project_image');
+					$size = 'large'; 
+					if( $image ) {
+						echo wp_get_attachment_image( $image, $size );
+					}
+				?>
+
+				<?php if ( get_field('live_site_link') ) : ?>
+					<a href="<?php the_field('live_site_link')?>" target=”_blank”>Live Site</a>
+				<?php endif ?>
+			</section>
+
+			<!-- calling contact us template part -->
+			<?php get_template_part( 'template-parts/contact-us' ); ?>
+			
+		</div><!-- page wrapper: end-->
 	</main><!-- #main -->
 
 <?php
