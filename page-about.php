@@ -21,8 +21,8 @@ get_header();
 		while ( have_posts() ) :
 			the_post();
 
-			// get_template_part( 'template-parts/banner', 'image' ); 
-			get_template_part( 'template-parts/content', 'page' );
+			get_template_part( 'template-parts/banner', 'image' ); 
+			// get_template_part( 'template-parts/content', 'page' );
 
 			if ( function_exists('get_field') ) :
 				if ( get_field('message')) :
@@ -36,14 +36,14 @@ get_header();
 					<img src="<?php echo esc_url($image['url']) ?>" alt="<?php echo esc_attr($image['alt']) ?>">
 					<?php
 				endif;
-				if ( get_field('banner-message')) :
+				if ( get_field('about-message')) :
 					?>
-					<h2><?php echo the_field('banner-message'); ?></h2>
+					<h2><?php echo the_field('about-message'); ?></h2>
 					<?php
 				endif;
-				if ( get_field('banner-paragraph')) :
+				if ( get_field('about-paragraph')) :
 					?>
-					<p><?php echo the_field('banner-paragraph'); ?></p>
+					<p><?php echo the_field('about-paragraph'); ?></p>
 					<?php
 				endif;
 			endif;
