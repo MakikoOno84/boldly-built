@@ -10,25 +10,26 @@
 ?>
 <section id='contact-us'>
     <h2 class='contact-heading'><span class='contact-text'>Get In<br></span> <span class='contact-text-two'>Touch</span></h2>
-    <button type='button' class='contact-btn'>Contact Us</button>
+    <button type='button' class='contact-btn open-modal'>Contact Us</button>
 </section>
 
 
 <!-- modal -->
 
 
-<div class="modal">
+<section class="modal">
 <span class="modal-backdrop close-modal"></span>
-<div class="modal-content">
-  <div class="modal-header">
-    <h2 class="modal-title">Modal Title</h2><button class="close-modal">&times</button>
-  </div>
-  <div class="modal-body">
-        <?php
-            echo do_shortcode( '[contact-form-7 id="97" title="contact us form"]' );
-        ?>
-  </div>
-  <div class="modal-footer">
-    <button class="close-modal">Cancel</button>
-  </div>
-</div>
+  <section class="modal-content">
+    <section class="modal-header">
+      <h2 class="modal-title">Modal Title</h2><button class="close-modal">&times</button>
+    </section>
+    <section class="modal-body">
+          <?php
+              echo do_shortcode( '[contact-form-7 id="97" title="contact us form"]' );
+          ?>
+    </section>
+    <div class="modal-footer">
+      <button class="close-modal">Cancel</button>
+    </div>
+  </section>
+</section>
