@@ -21,9 +21,13 @@ get_header();
 		while ( have_posts() ) :
 			the_post();
 
+			/* banner image */
 			get_template_part( 'template-parts/banner', 'image' ); 
-			// get_template_part( 'template-parts/content', 'page' );
 
+			?>
+			<!-- page wrapper: start-->
+			<div class='page-wrapper'>
+			<?php
 			if ( function_exists('get_field') ) :
 				if ( get_field('message')) :
 					?>
@@ -32,10 +36,13 @@ get_header();
 				endif;
 				if ( get_field('image')) :
 					$image = get_field('image');
-					?>
-					<img src="<?php echo esc_url($image['url']) ?>" alt="<?php echo esc_attr($image['alt']) ?>">
-					<?php
+					$size = 'medium'; // (thumbnail, medium, large, full or custom size)
+					if( $image ) {
+						echo wp_get_attachment_image( $image, $size );
+					}
 				endif;
+
+
 				if ( get_field('about-message')) :
 					?>
 					<h2><?php echo the_field('about-message'); ?></h2>
@@ -57,6 +64,9 @@ get_header();
 		
 		<!-- calling contact us template part -->
 		<?php get_template_part( 'template-parts/contact-us' ); ?>
+
+		
+		</div><!-- page wrapper: end-->
 	</main><!-- #main -->
 
 <?php

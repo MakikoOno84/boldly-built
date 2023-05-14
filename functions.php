@@ -47,9 +47,17 @@ function boldly_built_setup() {
 	add_theme_support( 'post-thumbnails' );
 
 	// This theme uses wp_nav_menu() in one location.
+	// register_nav_menus(
+	// 	array(
+	// 		'menu-1' => esc_html__( 'Primary', 'boldly-built' ),
+	// 	)
+	// );
+
 	register_nav_menus(
 		array(
-			'menu-1' => esc_html__( 'Primary', 'boldly-built' ),
+			'header' => esc_html__( 'Header Menu Location', 'boldly-built' ),
+			'footer-top' => esc_html__('Footer - top','boldly-built'),
+			'footer-bottom' => esc_html__('Footer - bottom','boldly-built'),
 		)
 	);
 
