@@ -75,16 +75,17 @@
 	display: block;
 }
 
-@media screen and (min-width: 37.5em) {
+// deleted by Makiko
+// @media screen and (min-width: 37.5em) {
 
-	.menu-toggle {
-		display: none;
-	}
+// 	.menu-toggle {
+// 		display: none;
+// 	}
 
-	.main-navigation ul {
-		display: flex;
-	}
-}
+// 	.main-navigation ul {
+// 		display: flex;
+// 	}
+// }
 
 .comment-navigation,
 .posts-navigation,
@@ -105,5 +106,69 @@
 	.nav-next {
 		text-align: end;
 		flex: 1 0 50%;
+	}
+}
+
+/* added by Makiko: start*/
+
+.site-header {
+	background-color: $grey;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	position: absolute;
+	left: 0;
+	right: 0;
+	z-index: 999;
+	svg {
+		fill: $white;
+	}
+	.custom-logo-link {
+		width: 6rem;
+	}
+}
+// remove margin on right from button 
+.main-navigation {
+	width: fit-content;
+}
+// reset default style for button
+.menu-toggle {
+	background-color: transparent;
+	border: none;
+}
+
+// style drop down menu
+.main-navigation ul {
+	position: absolute;
+	top: 6.1rem;
+	left: 0;
+	right: 0;
+	z-index: 999;
+	background-color: $grey;
+	a {
+		color: $white;
+		font-weight: 700;
+		font-size: $font__mobile_links;
+		display: block;
+		padding: 0.75rem 1.25rem;
+		text-align: center;
+		// text-transform: uppercase;
+	}
+}
+
+@media screen and (min-width: 37.5em) {
+
+	.menu-toggle {
+		display: none;
+	}
+
+	.main-navigation ul {
+		display: flex;
+		position: unset;
+		background-color: unset;
+		a {
+			font-size: $font__desktop_links;
+		}
 	}
 }

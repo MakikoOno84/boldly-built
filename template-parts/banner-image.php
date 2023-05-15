@@ -15,7 +15,7 @@
         the_title( '<h1 class="entry-title screen-reader-text">', '</h1>' );
         if ( function_exists('get_field') ) :
 			if ( get_field('banner-title') ) : ?>
-				<p class='banner-title'><?php echo get_field('banner-title') ?></p>
+				<p class='banner-title h1'><?php echo get_field('banner-title') ?></p>
 			<?php endif; 
         endif;
         ?>
