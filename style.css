@@ -675,9 +675,15 @@ textarea {
 }
 
 .page-wrapper {
-	margin: 0 1rem;
+	padding: 0 1rem;
 }
 
+@media (min-width: 37.5em) {
+	.page-wrapper {
+		margin: 0 auto;
+		max-width: 50em;
+	}
+}
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
