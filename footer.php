@@ -12,7 +12,7 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
-		<nav class='footer-menu top'>
+		<nav class='footer-menu footer-top'>
 		<?php
 			wp_nav_menu(
 				array(
@@ -23,18 +23,20 @@
 			?>
 		</nav><!-- #site-navigation -->
 
-		<p class='copyright'><?php esc_html_e('Copyright &copy; 2023 Boldy Built Media','boldly-built');?></p>
+		<div class="footer-bottom">
+			<p class='copyright'><?php esc_html_e('Copyright &copy; 2023 Boldy Built Media','boldly-built');?></p>
 
-		<nav class='footer-menu bottom'>
-		<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'footer-bottom',
-					'menu_id'        => 'Footer - bottom',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
+			<nav class='footer-menu bottom'>
+			<?php
+				wp_nav_menu(
+					array(
+						'theme_location' => 'footer-bottom',
+						'menu_id'        => 'Footer - bottom',
+					)
+				);
+				?>
+			</nav><!-- #site-navigation -->
+		</div>
 
 	</footer><!-- #colophon -->
 </div><!-- #page -->

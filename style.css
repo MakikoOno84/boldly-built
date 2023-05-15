@@ -806,15 +806,10 @@ textarea {
 		font-size: 1.5rem;
 	}
 }
-/* Posts and pages
+/* Content
 --------------------------------------------- */
 .sticky {
 	display: block;
-}
-
-.post,
-.page {
-	margin: 0 0 1.5em;
 }
 
 .updated:not(.published) {
@@ -830,6 +825,37 @@ textarea {
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+.site-footer {
+	background-color: #677589;
+	color: #F5FEFD;
+}
+.site-footer ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: space-between;
+}
+.site-footer ul a {
+	text-decoration: none;
+	color: #F5FEFD;
+	font-size: 1.125rem;
+}
+.site-footer p {
+	margin: 0;
+	text-align: center;
+}
+.site-footer .footer-bottom {
+	display: flex;
+	flex-direction: column-reverse;
+	gap: 1rem;
+	border-top: 1px solid #F5FEFD;
+}
+
+.footer-top, .footer-bottom {
+	padding: 2rem 0;
 }
 
 /* Comments
