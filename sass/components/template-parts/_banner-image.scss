@@ -1,5 +1,10 @@
 .banner {
     position: relative;
+    img {
+        display: block;
+        height: 100vh;
+        object-fit: cover;
+    }
 }
 
 .post-thumbnail::after {
@@ -11,4 +16,11 @@
     top: 0;
     left: 0;
     z-index: 2;
+}
+
+.hero-text {
+    position: absolute;
+    bottom: 15%;
+    color: $white;
+    z-index: 3;
 }

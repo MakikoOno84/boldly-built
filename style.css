@@ -725,14 +725,6 @@ textarea {
 	display: block;
 }
 
-@media screen and (min-width: 37.5em) {
-	.menu-toggle {
-		display: none;
-	}
-	.main-navigation ul {
-		display: flex;
-	}
-}
 .site-main .comment-navigation,
 .site-main .posts-navigation,
 .site-main .post-navigation {
@@ -755,6 +747,65 @@ textarea {
 	flex: 1 0 50%;
 }
 
+/* added by Makiko: start*/
+.site-header {
+	background-color: #677589;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	position: absolute;
+	left: 0;
+	right: 0;
+	z-index: 999;
+}
+.site-header svg {
+	fill: #F5FEFD;
+}
+.site-header .custom-logo-link {
+	width: 6rem;
+}
+
+.main-navigation {
+	width: -moz-fit-content;
+	width: fit-content;
+}
+
+.menu-toggle {
+	background-color: transparent;
+	border: none;
+}
+
+.main-navigation ul {
+	position: absolute;
+	top: 6.1rem;
+	left: 0;
+	right: 0;
+	z-index: 999;
+	background-color: #677589;
+}
+.main-navigation ul a {
+	color: #F5FEFD;
+	font-weight: 700;
+	font-size: 1.5rem;
+	display: block;
+	padding: 0.75rem 1.25rem;
+	text-align: center;
+}
+
+@media screen and (min-width: 37.5em) {
+	.menu-toggle {
+		display: none;
+	}
+	.main-navigation ul {
+		display: flex;
+		position: unset;
+		background-color: unset;
+	}
+	.main-navigation ul a {
+		font-size: 1.5rem;
+	}
+}
 /* Posts and pages
 --------------------------------------------- */
 .sticky {
@@ -971,6 +1022,12 @@ textarea {
 .banner {
 	position: relative;
 }
+.banner img {
+	display: block;
+	height: 100vh;
+	-o-object-fit: cover;
+	   object-fit: cover;
+}
 
 .post-thumbnail::after {
 	content: "";
@@ -981,6 +1038,13 @@ textarea {
 	top: 0;
 	left: 0;
 	z-index: 2;
+}
+
+.hero-text {
+	position: absolute;
+	bottom: 15%;
+	color: #F5FEFD;
+	z-index: 3;
 }
 
 /* Modal
