@@ -28,6 +28,7 @@ get_header();
 			<!-- page wrapper: start-->
 			<div class='page-wrapper'>
 			<?php
+			the_title( '<h1 class="entry-title">', '</h1>' );
 			if ( function_exists('get_field') ) :
 				if ( get_field('message')) :
 					?>
@@ -59,14 +60,12 @@ get_header();
 				comments_template();
 			endif;
 
-		endwhile; // End of the loop.
+			endwhile; // End of the loop.
 		?>
-		
+			</div><!-- page wrapper: end-->		
 		<!-- calling contact us template part -->
 		<?php get_template_part( 'template-parts/contact-us' ); ?>
 
-		
-		</div><!-- page wrapper: end-->
 	</main><!-- #main -->
 
 <?php

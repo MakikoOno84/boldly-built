@@ -24,6 +24,8 @@ get_header();
 		<!-- page wrapper: start-->
 		<div class='page-wrapper'>
 
+			<?php the_title( '<h1 class="entry-title">', '</h1>' );?>
+
 			<!-- technologies used -->
 			<section id='technologies'>
 
@@ -130,12 +132,11 @@ get_header();
 				<?php endif ?>
 			<!-- end of steps section-->
 			</section>
-			
+
+		</div><!-- page wrapper: end-->
 			<!-- calling contact us template part -->
 			<?php get_template_part( 'template-parts/contact-us' ); ?>
 
-		
-		</div><!-- page wrapper: end-->
 	</main><!-- #main -->
 
 <?php
