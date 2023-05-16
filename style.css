@@ -674,8 +674,16 @@ textarea {
 	grid-area: footer;
 }
 
+/* Added for Boldly Built */
 .page-wrapper {
 	padding: 0 1rem;
+	margin: 10rem auto;
+	margin-bottom: 4rem;
+}
+
+.home .page-wrapper,
+.page-id-8 .page-wrapper,
+.page-id-10 .page-wrapper {
 	margin: 4rem auto;
 }
 

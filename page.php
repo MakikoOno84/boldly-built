@@ -20,6 +20,10 @@ get_header();
 		<?php
 		while ( have_posts() ) :
 			the_post();
+			?>
+			<!-- page wrapper: start-->
+			<div class='page-wrapper'>
+			<?php
 
 			get_template_part( 'template-parts/content', 'page' );
 
@@ -28,6 +32,9 @@ get_header();
 				comments_template();
 			endif;
 
+			?>
+			</div><!-- page wrapper: end-->	
+			<?php
 		endwhile; // End of the loop.
 		?>
 
