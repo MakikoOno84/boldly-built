@@ -20,14 +20,26 @@
 	grid-area: footer;
 };
 
+/* Added for Boldly Built */
+
+// default margin
 .page-wrapper {
-	padding: 0 1rem ;
-	margin: 4rem auto ;
+	padding: $padding_page-wrapper ;
+	margin: $margin_page-wrapper-default;
+	margin-bottom: $margin_page-wrapper;
+}
+
+// margin for pages with banner images
+.home,
+.page-id-8, 
+.page-id-10 {
+	.page-wrapper {
+		margin: $margin_page-wrapper auto ;
+	}
 }
 
 @media (min-width: 37.5em) {
 	.page-wrapper {
-		// margin: 0 auto ;
-		max-width: 50em;
+		max-width: $max-width_page-wrapper;
 	}	
 }
