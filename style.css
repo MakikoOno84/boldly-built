@@ -676,11 +676,11 @@ textarea {
 
 .page-wrapper {
 	padding: 0 1rem;
+	margin: 4rem auto;
 }
 
 @media (min-width: 37.5em) {
 	.page-wrapper {
-		margin: 0 auto;
 		max-width: 50em;
 	}
 }
@@ -974,6 +974,16 @@ textarea {
 
 /* Pages
 --------------------------------------------- */
+@media screen and (min-width: 37.5em) {
+	.about-article {
+		display: flex;
+		gap: 1rem;
+		align-items: flex-start;
+	}
+	.about-article h2 {
+		margin-top: 0;
+	}
+}
 /* Template Parts
 --------------------------------------------- */
 #contact-us {
@@ -1063,6 +1073,18 @@ textarea {
 	height: 100vh;
 	-o-object-fit: cover;
 	   object-fit: cover;
+	-o-object-position: 60% 50%;
+	   object-position: 60% 50%;
+}
+
+.page-id-8 .banner img {
+	-o-object-position: 50% 50%;
+	   object-position: 50% 50%;
+}
+
+.page-id-10 .banner img {
+	-o-object-position: 20% 50%;
+	   object-position: 20% 50%;
 }
 
 .post-thumbnail::after {

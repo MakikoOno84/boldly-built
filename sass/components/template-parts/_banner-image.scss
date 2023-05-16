@@ -4,13 +4,22 @@
         display: block;
         height: 100vh;
         object-fit: cover;
+        // For front page and others
+        object-position: 60% 50%;
     }
+}
+// About Page
+.page-id-8 .banner img {
+    object-position: 50% 50%;
+}
+.page-id-10 .banner img {
+    object-position: 20% 50%;
 }
 
 .post-thumbnail::after {
     content: "";
     position: absolute;
-    background-color: rgba(0, 45, 98, 0.7);
+    background-color: $color__banner_overlay;
     width: 100%;
     height: 100%;
     top: 0;
