@@ -24,9 +24,40 @@ get_header();
 		<div class='page-wrapper'>
 
 			<section id="home-expertise">
-				<?php if ( get_field('home_section_title_') ) : ?>
-					<h2><?php the_field('home_section_title_')?></h2>
-				<?php endif ?>
+			<?php if ( have_rows('what_we_do') ) : ?>
+						<?php while ( have_rows('what_we_do') ) : the_row(); ?>
+
+							<?php 	$serviceTitle 		= get_sub_field('service_title');
+									$serviceDescription = get_sub_field('service_description');
+									$service1	  		= get_sub_field('service_1');
+									$service1Img		= get_sub_field('service_1_image'); 
+									$service2	  		= get_sub_field('service_2');
+									$service2Img	 	= get_sub_field('service_2_image'); 
+									$service3	  		= get_sub_field('service_3');
+									$service3Img	  	= get_sub_field('service_3_image'); 
+									$serviceMoreInfo	= get_sub_field('service_more_info')?>
+
+								<h2><?php echo $serviceTitle ?></h2>
+								<p><?php echo $serviceDescription ?></p>
+								<div class='service-wrappper'>
+									<p><?php echo $service1 ?></p>
+									<?php echo wp_get_attachment_image( $service1Img, 'medium') ?>
+								</div>
+
+								<div class='service-wrappper'>
+									<p><?php echo $service2 ?></p>
+									<?php echo wp_get_attachment_image( $service2Img, 'medium') ?>
+								</div>
+
+								<div class='service-wrappper'>
+									<p><?php echo $service3 ?></p>
+									<?php echo wp_get_attachment_image( $service3Img, 'medium') ?>
+								</div>
+
+								<a href="<?php echo $serviceMoreInfo ?>">More Info</a>
+
+						<?php endwhile ?>
+					<?php endif ?>
 
 			</section>
 
