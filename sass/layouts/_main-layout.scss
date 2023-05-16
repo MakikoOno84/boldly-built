@@ -22,11 +22,12 @@
 
 .page-wrapper {
 	padding: 0 1rem ;
+	margin: 4rem auto ;
 }
 
 @media (min-width: 37.5em) {
 	.page-wrapper {
-		margin: 0 auto ;
+		// margin: 0 auto ;
 		max-width: 50em;
 	}	
 }

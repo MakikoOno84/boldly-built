@@ -1,0 +1,10 @@
+@media screen and (min-width: 37.5em) {
+    .about-article {
+        display: flex;
+        gap: 1rem;
+        align-items: flex-start;
+        h2 {
+            margin-top:0;
+        }
+    }
+}

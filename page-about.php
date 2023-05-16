@@ -35,25 +35,29 @@ get_header();
 					<p><?php echo the_field('message'); ?></p>
 					<?php
 				endif;
-				if ( get_field('image')) :
-					$image = get_field('image');
-					$size = 'medium'; // (thumbnail, medium, large, full or custom size)
-					if( $image ) {
-						echo wp_get_attachment_image( $image, $size );
-					}
-				endif;
+				?><article class="about-article"><?php
+					if ( get_field('image')) :
+						$image = get_field('image');
+						$size = 'medium'; // (thumbnail, medium, large, full or custom size)
+						if( $image ) {
+							
+							echo wp_get_attachment_image( $image, $size );
+						}
+					endif;
 
-
-				if ( get_field('about-message')) :
-					?>
-					<h2><?php echo the_field('about-message'); ?></h2>
-					<?php
-				endif;
-				if ( get_field('about-paragraph')) :
-					?>
-					<p><?php echo the_field('about-paragraph'); ?></p>
-					<?php
-				endif;
+					?><div><?php
+						if ( get_field('about-message')) :
+							?>
+							<h2><?php echo the_field('about-message'); ?></h2>
+							<?php
+						endif;
+						if ( get_field('about-paragraph')) :
+							?>
+							<p><?php echo the_field('about-paragraph'); ?></p>
+							<?php
+						endif;
+					?></div><?php
+				?></article><?php
 			endif;
 			// If comments are open or we have at least one comment, load up the comment template.
 			if ( comments_open() || get_comments_number() ) :
