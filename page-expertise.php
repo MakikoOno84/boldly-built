@@ -17,6 +17,7 @@ get_header();
 
 	<main id="primary" class="site-main">
 
+
 		<!-- banner image -->
 		<?php get_template_part( 'template-parts/banner', 'image' ); ?>
 
@@ -28,9 +29,9 @@ get_header();
 
 			<!-- technologies used -->
 			<section id='technologies'>
-
-				<?php if ( have_rows('tech_used') ) : ?>
-					<?php while ( have_rows('tech_used') ) : the_row(); ?>
+			<?php if ( function_exists('have_rows') ) : ?>
+					<?php if ( have_rows('tech_used') ) : ?>
+						<?php while ( have_rows('tech_used') ) : the_row(); ?>
 
 						<?php 	$groupHeading = get_sub_field('group_heading');
 								$techOne 	  = get_sub_field('tech_one');
@@ -44,18 +45,24 @@ get_header();
 
 					<?php endwhile ?>
 				<?php endif ?>
-			<!-- end of technologies used -->
-			</section>
+			<?php endif ?>
+		<!-- end of technologies used -->
+		</section>
 
 			<!-- 4 essential steps to development section -->
 			<section id='developmentStep'>
+		<!-- 4 essential steps to development section -->
+		<section id='development-step'>
 
-				<!-- outputting headings for the steps -->
+			<!-- outputting headings for the steps -->
+			<?php if ( function_exists('have_rows') ) : ?>
 				<?php if ( get_field('step_heading') ) : ?>
-					<h2><?php the_field('step_heading')?></h2>
+					<h2 class='step-heading'><?php the_field('step_heading')?></h2>
 				<?php endif ?>
+			<?php endif ?>
 
-				<!-- looping the group field and outputting content for step 1 ux-research  -->
+			<!-- looping the group field and outputting content for step 1 ux-research  -->
+			<?php if ( function_exists('have_rows') ) : ?>
 				<?php if ( have_rows('ux_research') ) : ?>
 					<?php while ( have_rows('ux_research') ) : the_row(); ?>
 
@@ -65,16 +72,20 @@ get_header();
 								$image = get_sub_field('image'); ?>
 
 						<section class='step<?php echo $step?> steps'>
-								<p>0<?php echo $step?></p>
-								<h3><?php echo $title?></h3>
-								<p><?php echo $description?></p>
-								<?php echo wp_get_attachment_image( $image, 'full') ?>
+								<section>
+									<div class='step-icon'><p>0<?php echo $step?></p></div>
+									<h3 class='step-subheading'><?php echo $title?></h3>
+									<p class='step-description'><?php echo $description?></p>
+								</section>
+								<?php echo wp_get_attachment_image( $image, 'full', '', array('class' => 'step-image attachment-full size-full')) ?>
 						</section>
 
 					<?php endwhile ?>
 				<?php endif ?>
+			<?php endif ?>
 
-				<!-- looping the group field and outputting content for step 2 ux-strategy -->
+			<!-- looping the group field and outputting content for step 2 ux-strategy -->
+			<?php if ( function_exists('have_rows') ) : ?>
 				<?php if ( have_rows('ux_strategy') ) : ?>
 					<?php while ( have_rows('ux_strategy') ) : the_row(); ?>
 
@@ -84,16 +95,20 @@ get_header();
 								$image = get_sub_field('image'); ?>
 						
 						<section class='step<?php echo $step ?> steps'>
-							<p>0<?php echo $step?></p>
-							<h3><?php echo $title?></h3>
-							<p><?php echo $description?></p>
-							<?php echo wp_get_attachment_image( $image, 'full') ?>
+								<section>
+									<div class='step-icon'><p>0<?php echo $step?></p></div>
+									<h3 class='step-subheading'><?php echo $title?></h3>
+									<p class='step-description'><?php echo $description?></p>
+								</section>
+								<?php echo wp_get_attachment_image( $image, 'full', '', array('class' => 'step-image attachment-full size-full')) ?>
 						</section>
 
 					<?php endwhile ?>
 				<?php endif ?>
+			<?php endif ?>
 
-				<!-- looping the group field and outputting content for step 3 ux-design -->
+			<!-- looping the group field and outputting content for step 3 ux-design -->
+			<?php if ( function_exists('have_rows') ) : ?>
 				<?php if ( have_rows('ux_design') ) : ?>
 					<?php while ( have_rows('ux_design') ) : the_row(); ?>
 
@@ -103,16 +118,20 @@ get_header();
 								$image = get_sub_field('image'); ?>
 						
 						<section class='step<?php echo $step ?> steps'>
-							<p>0<?php echo $step?></p>
-							<h3><?php echo $title?></h3>
-							<p><?php echo $description?></p>
-							<?php echo wp_get_attachment_image( $image, 'full') ?>
+								<section>
+									<div class='step-icon'><p>0<?php echo $step?></p></div>
+									<h3 class='step-subheading'><?php echo $title?></h3>
+									<p class='step-description'><?php echo $description?></p>
+								</section>
+								<?php echo wp_get_attachment_image( $image, 'full', '', array('class' => 'step-image attachment-full size-full')) ?>
 						</section>
 
 					<?php endwhile ?>
 				<?php endif ?>
+			<?php endif ?>
 
-				<!-- looping the group field and outputting content for step 4 web-design -->
+			<!-- looping the group field and outputting content for step 4 web-design -->
+			<?php if ( function_exists('have_rows') ) : ?>
 				<?php if ( have_rows('web_design') ) : ?>
 					<?php while ( have_rows('web_design') ) : the_row(); ?>
 
@@ -122,15 +141,18 @@ get_header();
 								$image = get_sub_field('image'); ?>
 						
 						<section class='step<?php echo $step ?> steps'>
-							<p>0<?php echo $step?></p>
-							<h3><?php echo $title?></h3>
-							<p><?php echo $description?></p>
-							<?php echo wp_get_attachment_image( $image, 'full') ?>
+								<section>
+									<div class='step-icon'><p>0<?php echo $step?></p></div>
+									<h3 class='step-subheading'><?php echo $title?></h3>
+									<p class='step-description'><?php echo $description?></p>
+								</section>
+								<?php echo wp_get_attachment_image( $image, 'full', '', array('class' => 'step-image attachment-full size-full')) ?>
 						</section>
 
-					<?php endwhile ?>
+						<?php endwhile ?>
+					<?php endif ?>
 				<?php endif ?>
-			<!-- end of steps section-->
+		<!-- end of steps section-->
 			</section>
 
 		</div><!-- page wrapper: end-->
