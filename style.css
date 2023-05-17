@@ -689,7 +689,7 @@ textarea {
 
 @media (min-width: 37.5em) {
 	.page-wrapper {
-		max-width: 50em;
+		max-width: 90em;
 	}
 }
 /*--------------------------------------------------------------
@@ -1046,7 +1046,7 @@ textarea {
 	flex-direction: column;
 	position: relative;
 	align-items: center;
-	max-width: 1440px;
+	max-width: 90em;
 	margin: 0 auto;
 }
 
@@ -1089,7 +1089,7 @@ textarea {
 	text-align: center;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 48em) {
 	.contact-btn {
 		top: -150px;
 		right: 225px;
@@ -1110,7 +1110,7 @@ textarea {
 		height: 250px;
 	}
 }
-@media (min-width: 1024px) {
+@media (min-width: 64em) {
 	#contact-us::before {
 		height: 325px;
 	}
@@ -1118,6 +1118,9 @@ textarea {
 		height: 150px;
 		width: 150px;
 		font-size: 1.5rem;
+	}
+	#contact-us {
+		padding: 0 1rem;
 	}
 }
 .banner {
