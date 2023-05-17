@@ -1,0 +1,47 @@
+.step-heading {
+    font-size: 3rem;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.step-icon,
+.step-subheading,
+.step-description {
+    text-align: center;
+}
+
+.step-icon {
+    background-color: $blue;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+    border-radius: 20%;
+}
+
+.step-icon > p {
+    color: $white;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.step-image {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .step-image {
+        display: inline-block;
+        height: 100%;
+        max-width: 50%;
+        border-radius: 10%;
+    }
+
+    .steps {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 1rem;
+        justify-items: center;
+        position: relative;
+        margin-bottom: 2rem;
+    }
+}
