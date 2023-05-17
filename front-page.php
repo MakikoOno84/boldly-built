@@ -86,13 +86,9 @@ get_header();
 					<a href="<?php the_field('live_site_link')?>" target=”_blank”>Live Site</a>
 				<?php endif ?>
 			</section>
-		
 		</div><!-- page wrapper: end-->
-
 			<!-- calling contact us template part -->
 			<?php get_template_part( 'template-parts/contact-us' ); ?>
-			
-		
 	</main><!-- #main -->
 
 <?php

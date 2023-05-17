@@ -3,7 +3,7 @@
     flex-direction: column;
     position: relative;
     align-items: center;
-    max-width: 1440px;
+    max-width: $max-width_page-wrapper;
     margin: 0 auto;
 }
 
@@ -36,7 +36,7 @@
     text-align: center;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 48em) {
     .contact-btn {
         top: -150px;
         right: 225px;
@@ -62,7 +62,7 @@
     };
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 64em) {
     #contact-us::before {
         height: 325px;
     };
@@ -71,5 +71,9 @@
         height: 150px;
         width: 150px;
         font-size: 1.5rem;
+    }
+
+    #contact-us {
+        padding: $padding_page-wrapper ;
     }
 }
