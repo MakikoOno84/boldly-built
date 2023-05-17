@@ -1,0 +1,34 @@
+.site-footer {
+	background-color: $grey;
+    color: $white;
+
+    // Style ul
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        a {
+            text-decoration: none;
+            color: $white;
+            font-size: $font__mobile_links;
+        }
+    }
+    p {
+        margin: 0;
+        text-align: center;
+    }
+
+    .footer-bottom {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 1rem;
+        border-top: 1px solid $white;
+    }
+
+}
+
+.footer-top,.footer-bottom {
+    padding: 2rem 0;
+}

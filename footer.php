@@ -12,19 +12,32 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'boldly-built' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'boldly-built' ), 'WordPress' );
+		<nav class='footer-menu footer-top'>
+		<?php
+			wp_nav_menu(
+				array(
+					'theme_location' => 'footer-top',
+					'menu_id'        => 'Footer - top',
+				)
+			);
+			?>
+		</nav><!-- #site-navigation -->
+
+		<div class="footer-bottom">
+			<p class='copyright'><?php esc_html_e('Copyright &copy; 2023 Boldy Built Media','boldly-built');?></p>
+
+			<nav class='footer-menu bottom'>
+			<?php
+				wp_nav_menu(
+					array(
+						'theme_location' => 'footer-bottom',
+						'menu_id'        => 'Footer - bottom',
+					)
+				);
 				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'boldly-built' ), 'boldly-built', '<a href="http://underscores.me/">Makiko Ono</a>' );
-				?>
-		</div><!-- .site-info -->
+			</nav><!-- #site-navigation -->
+		</div>
+
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

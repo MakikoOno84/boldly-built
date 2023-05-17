@@ -17,11 +17,21 @@ get_header();
 
 	<main id="primary" class="site-main">
 
-		<!-- technologies used -->
-		<section id='technologies'>
+
+		<!-- banner image -->
+		<?php get_template_part( 'template-parts/banner', 'image' ); ?>
+
+		
+		<!-- page wrapper: start-->
+		<div class='page-wrapper'>
+
+			<?php the_title( '<h1 class="entry-title">', '</h1>' );?>
+
+			<!-- technologies used -->
+			<section id='technologies'>
 			<?php if ( function_exists('have_rows') ) : ?>
-				<?php if ( have_rows('tech_used') ) : ?>
-					<?php while ( have_rows('tech_used') ) : the_row(); ?>
+					<?php if ( have_rows('tech_used') ) : ?>
+						<?php while ( have_rows('tech_used') ) : the_row(); ?>
 
 						<?php 	$groupHeading = get_sub_field('group_heading');
 								$techOne 	  = get_sub_field('tech_one');
@@ -39,6 +49,8 @@ get_header();
 		<!-- end of technologies used -->
 		</section>
 
+			<!-- 4 essential steps to development section -->
+			<section id='developmentStep'>
 		<!-- 4 essential steps to development section -->
 		<section id='development-step'>
 
@@ -137,14 +149,16 @@ get_header();
 								<?php echo wp_get_attachment_image( $image, 'full', '', array('class' => 'step-image attachment-full size-full')) ?>
 						</section>
 
-					<?php endwhile ?>
+						<?php endwhile ?>
+					<?php endif ?>
 				<?php endif ?>
-			<?php endif ?>
 		<!-- end of steps section-->
-		</section>
-		
-		<!-- calling contact us template part -->
-		<?php get_template_part( 'template-parts/contact-us' ); ?>
+			</section>
+
+		</div><!-- page wrapper: end-->
+			<!-- calling contact us template part -->
+			<?php get_template_part( 'template-parts/contact-us' ); ?>
+
 	</main><!-- #main -->
 
 <?php

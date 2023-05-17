@@ -674,6 +674,24 @@ textarea {
 	grid-area: footer;
 }
 
+/* Added for Boldly Built */
+.page-wrapper {
+	padding: 0 1rem;
+	margin: 10rem auto;
+	margin-bottom: 4rem;
+}
+
+.home .page-wrapper,
+.page-id-8 .page-wrapper,
+.page-id-10 .page-wrapper {
+	margin: 4rem auto;
+}
+
+@media (min-width: 37.5em) {
+	.page-wrapper {
+		max-width: 50em;
+	}
+}
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
@@ -725,14 +743,6 @@ textarea {
 	display: block;
 }
 
-@media screen and (min-width: 37.5em) {
-	.menu-toggle {
-		display: none;
-	}
-	.main-navigation ul {
-		display: flex;
-	}
-}
 .site-main .comment-navigation,
 .site-main .posts-navigation,
 .site-main .post-navigation {
@@ -755,15 +765,69 @@ textarea {
 	flex: 1 0 50%;
 }
 
-/* Posts and pages
+/* added by Makiko: start*/
+.site-header {
+	background-color: #677589;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	position: absolute;
+	left: 0;
+	right: 0;
+	z-index: 999;
+}
+.site-header svg {
+	fill: #F5FEFD;
+}
+.site-header .custom-logo-link {
+	width: 6rem;
+}
+
+.main-navigation {
+	width: -moz-fit-content;
+	width: fit-content;
+}
+
+.menu-toggle {
+	background-color: transparent;
+	border: none;
+}
+
+.main-navigation ul {
+	position: absolute;
+	top: 6.1rem;
+	left: 0;
+	right: 0;
+	z-index: 999;
+	background-color: #677589;
+}
+.main-navigation ul a {
+	color: #F5FEFD;
+	font-weight: 700;
+	font-size: 1.5rem;
+	display: block;
+	padding: 0.75rem 1.25rem;
+	text-align: center;
+}
+
+@media screen and (min-width: 37.5em) {
+	.menu-toggle {
+		display: none;
+	}
+	.main-navigation ul {
+		display: flex;
+		position: unset;
+		background-color: unset;
+	}
+	.main-navigation ul a {
+		font-size: 1.5rem;
+	}
+}
+/* Content
 --------------------------------------------- */
 .sticky {
 	display: block;
-}
-
-.post,
-.page {
-	margin: 0 0 1.5em;
 }
 
 .updated:not(.published) {
@@ -779,6 +843,37 @@ textarea {
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+.site-footer {
+	background-color: #677589;
+	color: #F5FEFD;
+}
+.site-footer ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: space-between;
+}
+.site-footer ul a {
+	text-decoration: none;
+	color: #F5FEFD;
+	font-size: 1.125rem;
+}
+.site-footer p {
+	margin: 0;
+	text-align: center;
+}
+.site-footer .footer-bottom {
+	display: flex;
+	flex-direction: column-reverse;
+	gap: 1rem;
+	border-top: 1px solid #F5FEFD;
+}
+
+.footer-top, .footer-bottom {
+	padding: 2rem 0;
 }
 
 /* Comments
@@ -934,6 +1029,16 @@ textarea {
 		margin-bottom: 2rem;
 	}
 }
+@media screen and (min-width: 37.5em) {
+	.about-article {
+		display: flex;
+		gap: 1rem;
+		align-items: flex-start;
+	}
+	.about-article h2 {
+		margin-top: 0;
+	}
+}
 /* Template Parts
 --------------------------------------------- */
 #contact-us {
@@ -1015,6 +1120,46 @@ textarea {
 		font-size: 1.5rem;
 	}
 }
+.banner {
+	position: relative;
+}
+.banner img {
+	display: block;
+	height: 100vh;
+	-o-object-fit: cover;
+	   object-fit: cover;
+	-o-object-position: 60% 50%;
+	   object-position: 60% 50%;
+}
+
+.page-id-8 .banner img {
+	-o-object-position: 50% 50%;
+	   object-position: 50% 50%;
+}
+
+.page-id-10 .banner img {
+	-o-object-position: 20% 50%;
+	   object-position: 20% 50%;
+}
+
+.post-thumbnail::after {
+	content: "";
+	position: absolute;
+	background-color: rgba(0, 45, 98, 0.7);
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 2;
+}
+
+.hero-text {
+	position: absolute;
+	bottom: 15%;
+	color: #F5FEFD;
+	z-index: 3;
+}
+
 /* Modal
 --------------------------------------------- */
 /* Simple page styles */
