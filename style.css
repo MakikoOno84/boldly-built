@@ -678,13 +678,13 @@ textarea {
 .page-wrapper {
 	padding: 0 1rem;
 	margin: 10rem auto;
-	margin-bottom: 4rem;
+	margin-bottom: 3rem;
 }
 
 .home .page-wrapper,
 .page-id-8 .page-wrapper,
 .page-id-10 .page-wrapper {
-	margin: 4rem auto;
+	margin: 3rem auto;
 }
 
 @media (min-width: 37.5em) {
