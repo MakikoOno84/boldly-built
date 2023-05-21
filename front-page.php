@@ -39,19 +39,21 @@ get_header();
 
 								<h2><?php echo $serviceTitle ?></h2>
 								<p><?php echo $serviceDescription ?></p>
-								<div class='service-block'>
-									<?php echo wp_get_attachment_image( $service1Img, 'medium') ?>
-									<p><?php echo $service1 ?></p>
-								</div>
+								<div class="service-wrapper">
+									<div class='service-block'>
+										<?php echo wp_get_attachment_image( $service1Img, 'medium') ?>
+										<p><?php echo $service1 ?></p>
+									</div>
 
-								<div class='service-block'>
-									<?php echo wp_get_attachment_image( $service2Img, 'medium') ?>
-									<p><?php echo $service2 ?></p>
-								</div>
+									<div class='service-block'>
+										<?php echo wp_get_attachment_image( $service2Img, 'medium') ?>
+										<p><?php echo $service2 ?></p>
+									</div>
 
-								<div class='service-block'>
-									<?php echo wp_get_attachment_image( $service3Img, 'medium') ?>
-									<p><?php echo $service3 ?></p>
+									<div class='service-block'>
+										<?php echo wp_get_attachment_image( $service3Img, 'medium') ?>
+										<p><?php echo $service3 ?></p>
+									</div>
 								</div>
 
 								<a class="expertise-button"href="<?php echo $serviceMoreInfo ?>">More Info</a>
@@ -66,25 +68,28 @@ get_header();
 					<h2><?php the_field('featured_title')?></h2>
 				<?php endif ?>
 
-				<?php if ( get_field('project_title') ) : ?>
-					<h3><?php the_field('project_title')?></h3>
-				<?php endif ?>
+				<div class="feature-wrapper">
+					<?php 
+						$image = get_field('project_image');
+						$size = 'large'; 
+						if( $image ) {
+							echo wp_get_attachment_image( $image, $size );
+						}
+					?>
+					<div class="descr-box">
+						<?php if ( get_field('project_title') ) : ?>
+							<h3><?php the_field('project_title')?></h3>
+						<?php endif ?>
 
-				<?php if ( get_field('project_description') ) : ?>
-					<p><?php the_field('project_description')?></p>
-				<?php endif ?>
+						<?php if ( get_field('project_description') ) : ?>
+							<p><?php the_field('project_description')?></p>
+						<?php endif ?>
 
-				<?php 
-					$image = get_field('project_image');
-					$size = 'large'; 
-					if( $image ) {
-						echo wp_get_attachment_image( $image, $size );
-					}
-				?>
-
-				<?php if ( get_field('live_site_link') ) : ?>
-					<a href="<?php the_field('live_site_link')?>" target=”_blank”>Live Site</a>
-				<?php endif ?>
+						<?php if ( get_field('live_site_link') ) : ?>
+							<a href="<?php the_field('live_site_link')?>" target=”_blank”>Live Site</a>
+						<?php endif ?>
+					</div>	
+				</div>
 			</section>
 		</div><!-- page wrapper: end-->
 			<!-- calling contact us template part -->
