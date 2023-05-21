@@ -1,6 +1,6 @@
 .service-block {
     display: inline-block;
-    background-color: $blue;
+    background-color: $lightBlue;
     border-radius: 10%;
     margin: 1em;
 
@@ -12,6 +12,7 @@
     }
     p {
         text-align:center;
+        color: $white;
     }
 }
 
