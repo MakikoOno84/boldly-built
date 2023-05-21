@@ -1039,6 +1039,28 @@ textarea {
 		margin-top: 0;
 	}
 }
+.service-block {
+	display: inline-block;
+	background-color: #002D62;
+	border-radius: 10%;
+	margin: 1em;
+}
+.service-block img {
+	height: 10em;
+	width: 18em;
+	border-radius: 10% 10% 0 0;
+	-o-object-fit: cover;
+	   object-fit: cover;
+}
+.service-block p {
+	text-align: center;
+}
+
+.expertise-button {
+	display: block;
+	text-align: center;
+}
+
 /* Template Parts
 --------------------------------------------- */
 #contact-us {

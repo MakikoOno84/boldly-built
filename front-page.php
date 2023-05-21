@@ -39,22 +39,22 @@ get_header();
 
 								<h2><?php echo $serviceTitle ?></h2>
 								<p><?php echo $serviceDescription ?></p>
-								<div class='service-wrappper'>
-									<p><?php echo $service1 ?></p>
+								<div class='service-block'>
 									<?php echo wp_get_attachment_image( $service1Img, 'medium') ?>
+									<p><?php echo $service1 ?></p>
 								</div>
 
-								<div class='service-wrappper'>
-									<p><?php echo $service2 ?></p>
+								<div class='service-block'>
 									<?php echo wp_get_attachment_image( $service2Img, 'medium') ?>
+									<p><?php echo $service2 ?></p>
 								</div>
 
-								<div class='service-wrappper'>
-									<p><?php echo $service3 ?></p>
+								<div class='service-block'>
 									<?php echo wp_get_attachment_image( $service3Img, 'medium') ?>
+									<p><?php echo $service3 ?></p>
 								</div>
 
-								<a href="<?php echo $serviceMoreInfo ?>">More Info</a>
+								<a class="expertise-button"href="<?php echo $serviceMoreInfo ?>">More Info</a>
 
 						<?php endwhile ?>
 					<?php endif ?>
