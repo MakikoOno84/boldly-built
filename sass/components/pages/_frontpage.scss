@@ -1,0 +1,22 @@
+.service-block {
+    display: inline-block;
+    background-color: $blue;
+    border-radius: 10%;
+    margin: 1em;
+
+    img {
+        height: 10em;
+        width: 18em;
+        border-radius: 10% 10% 0 0;
+        object-fit: cover;
+    }
+    p {
+        text-align:center;
+    }
+}
+
+.expertise-button {
+    display: block;
+    text-align: center;
+
+}
