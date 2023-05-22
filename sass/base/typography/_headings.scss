@@ -18,11 +18,11 @@ h1 {
 // use for fake h1
 .h1 {
 	font-family: $font__heading;
-	font-size: $font__mobile_heading_one;
+	font-size: $font__banner_heading_mobile;
 	font-weight: bold;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 48em) {
 	
 	h2,
 	h3,
@@ -37,7 +37,7 @@ h1 {
 	}
 
 	.h1 {
-		font-size: $font__desktop_heading_one;
+		font-size: $font__banner_heading_desktop
 	}
 	
 }
