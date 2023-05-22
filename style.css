@@ -1100,6 +1100,83 @@ textarea {
 		margin-top: 0;
 	}
 }
+#home-expertise p,
+#home-expertise h2 {
+	text-align: center;
+}
+
+.service-wrapper {
+	display: flex;
+	justify-content: center;
+}
+
+.service-block {
+	display: inline-block;
+	background-color: #475F9B;
+	border-radius: 5%;
+	margin: 1em;
+}
+.service-block img {
+	height: 10em;
+	width: 18em;
+	border-radius: 5% 5% 0 0;
+	-o-object-fit: cover;
+	   object-fit: cover;
+}
+.service-block p {
+	text-align: center;
+	color: #F5FEFD;
+}
+
+.expertise-button {
+	display: block;
+	text-align: center;
+}
+
+#home-feature h2,
+#home-feature h3,
+#home-feature a {
+	text-align: center;
+}
+#home-feature a {
+	display: block;
+}
+#home-feature img {
+	max-width: 90%;
+	margin: 0 auto;
+	display: block;
+	border-radius: 5%;
+}
+#home-feature p {
+	margin: 2em auto;
+	max-width: 90%;
+}
+
+.descr-box {
+	background-color: #677589;
+	padding: 3em;
+}
+.descr-box p {
+	color: #F5FEFD;
+}
+
+@media (min-width: 768px) {
+	.feature-wrapper {
+		position: relative;
+		max-width: 90%;
+		margin: 0 auto;
+	}
+	.feature-wrapper img {
+		position: absolute;
+		z-index: 1;
+		top: 2.5em;
+	}
+	.feature-wrapper .descr-box {
+		position: relative;
+		width: 50%;
+		left: 34em;
+	}
+}
 /* Template Parts
 --------------------------------------------- */
 #contact-us {

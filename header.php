@@ -48,4 +48,22 @@
 			);
 			?>
 		</nav><!-- #site-navigation -->
+		<button type='button' class='open-modal'>Contact Us</button>
+			<!-- modal -->
+			<section class="modal">
+			<span class="modal-backdrop close-modal"></span>
+			<section class="modal-content">
+				<section class="modal-header">
+				<h2 class="modal-title">Modal Title</h2><button class="close-modal">&times</button>
+				</section>
+				<section class="modal-body">
+					<?php
+						echo do_shortcode( '[contact-form-7 id="97" title="contact us form"]' );
+					?>
+				</section>
+				<div class="modal-footer">
+				<button class="close-modal">Cancel</button>
+				</div>
+			</section>
+			</section>
 	</header><!-- #masthead -->
