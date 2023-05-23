@@ -46,14 +46,17 @@
 // padding on left and right
 .page-wrapper,
 .header-menu-wrapper,
-.footer-menu-wrapper {
+.footer-top,
+.footer-bottom {
 	padding: $padding_page-wrapper ;
 }
 
 @media (min-width: 37.5em) {
 	.page-wrapper,
 	.header-menu-wrapper,
-	.footer-menu-wrapper {
+	.footer-top,
+	.footer-bottom {
 		max-width: $max-width_page-wrapper;
+		margin: 0 auto;
 	}
 }
