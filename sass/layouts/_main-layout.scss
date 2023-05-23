@@ -52,11 +52,12 @@
 }
 
 @media (min-width: 37.5em) {
-	.page-wrapper,
+	.page-wrapper {
+		max-width: $max-width_page-wrapper;
+	}
 	.header-menu-wrapper,
 	.footer-top,
 	.footer-bottom {
-		max-width: $max-width_page-wrapper;
 		margin: 0 auto;
 	}
 }

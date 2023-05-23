@@ -12,6 +12,7 @@
 .page-id-8 .banner img {
     object-position: 50% 50%;
 }
+// Expertise Page
 .page-id-10 .banner img {
     object-position: 20% 50%;
 }
@@ -32,4 +33,12 @@
     bottom: 15%;
     color: $white;
     z-index: 3;
+}
+
+@media (min-width: 37.5em) {
+    .banner {
+        img {
+            height: 80vh;
+        }
+    }
 }
