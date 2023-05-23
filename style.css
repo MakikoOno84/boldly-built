@@ -675,8 +675,10 @@ textarea {
 }
 
 /* Added for Boldly Built */
+/* ---------------------------------------------
+	page wrapper
+--------------------------------------------- */
 .page-wrapper {
-	padding: 0 1rem;
 	margin: 10rem auto;
 	margin-bottom: 3rem;
 }
@@ -687,8 +689,19 @@ textarea {
 	margin: 3rem auto;
 }
 
+/* ---------------------------------------------
+	header, page wrapper, and footer
+--------------------------------------------- */
+.page-wrapper,
+.header-menu-wrapper,
+.footer-menu-wrapper {
+	padding: 0 1rem;
+}
+
 @media (min-width: 37.5em) {
-	.page-wrapper {
+	.page-wrapper,
+	.header-menu-wrapper,
+	.footer-menu-wrapper {
 		max-width: 90em;
 	}
 }
@@ -768,30 +781,36 @@ textarea {
 /* added by Makiko: start*/
 .site-header {
 	background-color: #677589;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-	position: absolute;
+	position: fixed;
 	left: 0;
 	right: 0;
 	z-index: 999;
 }
-.site-header svg {
+
+.header-menu-wrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+.header-menu-wrapper svg {
 	fill: #F5FEFD;
 }
-.site-header .custom-logo-link {
+.header-menu-wrapper .custom-logo-link {
 	width: 6rem;
 }
-.site-header .site-menu {
+.header-menu-wrapper .site-menu {
 	display: flex;
 	flex-direction: row-reverse;
 }
-.site-header button {
+.header-menu-wrapper button {
 	background-color: transparent;
 	border: none;
 }
-.site-header .open-modal {
+.header-menu-wrapper .menu-toggle {
+	padding: 0.5rem 0 0.5rem 1rem;
+}
+.header-menu-wrapper .open-modal {
 	border: 1px solid #F5FEFD;
 	color: #F5FEFD;
 	border-radius: unset;
@@ -881,7 +900,6 @@ textarea {
 	display: flex;
 	flex-direction: column-reverse;
 	gap: 1rem;
-	border-top: 1px solid #F5FEFD;
 }
 
 .footer-top, .footer-bottom {

@@ -22,9 +22,11 @@
 
 /* Added for Boldly Built */
 
+/* ---------------------------------------------
+	page wrapper
+--------------------------------------------- */
 // default margin
 .page-wrapper {
-	padding: $padding_page-wrapper ;
 	margin: $margin_page-wrapper-default;
 	margin-bottom: $margin_page-wrapper;
 }
@@ -38,8 +40,20 @@
 	}
 }
 
+/* ---------------------------------------------
+	header, page wrapper, and footer
+--------------------------------------------- */
+// padding on left and right
+.page-wrapper,
+.header-menu-wrapper,
+.footer-menu-wrapper {
+	padding: $padding_page-wrapper ;
+}
+
 @media (min-width: 37.5em) {
-	.page-wrapper {
+	.page-wrapper,
+	.header-menu-wrapper,
+	.footer-menu-wrapper {
 		max-width: $max-width_page-wrapper;
-	}	
+	}
 }

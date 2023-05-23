@@ -110,17 +110,19 @@
 }
 
 /* added by Makiko: start*/
-
 .site-header {
 	background-color: $grey;
+	position: fixed;
+	left: 0;
+	right: 0;
+	z-index: 999;
+}
+.header-menu-wrapper {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	position: absolute;
-	left: 0;
-	right: 0;
-	z-index: 999;
+
 	svg {
 		fill: $white;
 	}
@@ -137,6 +139,9 @@
 		background-color: transparent;
 		border: none;
 
+	}
+	.menu-toggle {
+		padding: .5rem 0 .5rem 1rem;
 	}
 	.open-modal {
 		border: 1px solid $white;
