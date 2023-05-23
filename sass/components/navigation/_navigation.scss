@@ -127,16 +127,34 @@
 	.custom-logo-link {
 		width: 6rem;
 	}
+
+	.site-menu {
+		display: flex;
+		flex-direction: row-reverse;
+	}
+	// reset default style for button
+	button {
+		background-color: transparent;
+		border: none;
+
+	}
+	.open-modal {
+		border: 1px solid $white;
+		color: $white;
+		border-radius: unset;
+		padding: .5rem 1rem;
+	}
+
 }
 // remove margin on right from button 
 .main-navigation {
 	width: fit-content;
 }
 // reset default style for button
-.menu-toggle {
-	background-color: transparent;
-	border: none;
-}
+// .menu-toggle {
+// 	background-color: transparent;
+// 	border: none;
+// }
 
 // style drop down menu
 .main-navigation ul {
@@ -170,5 +188,9 @@
 		a {
 			font-size: $font__desktop_nav_links;
 		}
+	}
+
+	.site-header .site-menu {
+		flex-direction: row;
 	}
 }

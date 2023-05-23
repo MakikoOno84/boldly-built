@@ -783,15 +783,24 @@ textarea {
 .site-header .custom-logo-link {
 	width: 6rem;
 }
+.site-header .site-menu {
+	display: flex;
+	flex-direction: row-reverse;
+}
+.site-header button {
+	background-color: transparent;
+	border: none;
+}
+.site-header .open-modal {
+	border: 1px solid #F5FEFD;
+	color: #F5FEFD;
+	border-radius: unset;
+	padding: 0.5rem 1rem;
+}
 
 .main-navigation {
 	width: -moz-fit-content;
 	width: fit-content;
-}
-
-.menu-toggle {
-	background-color: transparent;
-	border: none;
 }
 
 .main-navigation ul {
@@ -822,6 +831,9 @@ textarea {
 	}
 	.main-navigation ul a {
 		font-size: 1.5rem;
+	}
+	.site-header .site-menu {
+		flex-direction: row;
 	}
 }
 /* Content
