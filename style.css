@@ -700,11 +700,12 @@ textarea {
 }
 
 @media (min-width: 37.5em) {
-	.page-wrapper,
+	.page-wrapper {
+		max-width: 90em;
+	}
 	.header-menu-wrapper,
 	.footer-top,
 	.footer-bottom {
-		max-width: 90em;
 		margin: 0 auto;
 	}
 }
@@ -781,7 +782,7 @@ textarea {
 	flex: 1 0 50%;
 }
 
-/* added by Makiko: start*/
+/* Added for Boldly Built */
 .site-header {
 	background-color: #677589;
 	position: fixed;
@@ -832,6 +833,7 @@ textarea {
 	right: 0;
 	z-index: 999;
 	background-color: #677589;
+	text-transform: uppercase;
 }
 .main-navigation ul a {
 	color: #F5FEFD;
@@ -889,6 +891,7 @@ textarea {
 	padding: 0;
 	display: flex;
 	justify-content: space-between;
+	text-transform: uppercase;
 }
 .site-footer ul a {
 	text-decoration: none;
@@ -1291,6 +1294,11 @@ textarea {
 	z-index: 3;
 }
 
+@media (min-width: 37.5em) {
+	.banner img {
+		height: 80vh;
+	}
+}
 /* Modal
 --------------------------------------------- */
 /* Simple page styles */

@@ -109,7 +109,8 @@
 	}
 }
 
-/* added by Makiko: start*/
+/* Added for Boldly Built */
+
 .site-header {
 	background-color: $grey;
 	position: fixed;
@@ -169,6 +170,7 @@
 	right: 0;
 	z-index: 999;
 	background-color: $grey;
+	text-transform: uppercase;
 	a {
 		color: $white;
 		font-weight: 700;
