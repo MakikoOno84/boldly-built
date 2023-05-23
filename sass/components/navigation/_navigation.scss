@@ -110,33 +110,56 @@
 }
 
 /* added by Makiko: start*/
-
 .site-header {
 	background-color: $grey;
+	position: fixed;
+	left: 0;
+	right: 0;
+	z-index: 999;
+}
+.header-menu-wrapper {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	position: absolute;
-	left: 0;
-	right: 0;
-	z-index: 999;
+
 	svg {
 		fill: $white;
 	}
 	.custom-logo-link {
 		width: 6rem;
 	}
+
+	.site-menu {
+		display: flex;
+		flex-direction: row-reverse;
+	}
+	// reset default style for button
+	button {
+		background-color: transparent;
+		border: none;
+
+	}
+	.menu-toggle {
+		padding: .5rem 0 .5rem 1rem;
+	}
+	.open-modal {
+		border: 1px solid $white;
+		color: $white;
+		border-radius: unset;
+		padding: .5rem 1rem;
+	}
+
 }
 // remove margin on right from button 
 .main-navigation {
 	width: fit-content;
 }
 // reset default style for button
-.menu-toggle {
-	background-color: transparent;
-	border: none;
-}
+// .menu-toggle {
+// 	background-color: transparent;
+// 	border: none;
+// }
 
 // style drop down menu
 .main-navigation ul {
@@ -157,7 +180,7 @@
 	}
 }
 
-@media screen and (min-width: 37.5em) {
+@media (min-width: 37.5em) {
 
 	.menu-toggle {
 		display: none;
@@ -170,5 +193,9 @@
 		a {
 			font-size: $font__desktop_nav_links;
 		}
+	}
+
+	.site-header .site-menu {
+		flex-direction: row;
 	}
 }

@@ -675,8 +675,10 @@ textarea {
 }
 
 /* Added for Boldly Built */
+/* ---------------------------------------------
+	page wrapper
+--------------------------------------------- */
 .page-wrapper {
-	padding: 0 1rem;
 	margin: 10rem auto;
 	margin-bottom: 3rem;
 }
@@ -687,9 +689,23 @@ textarea {
 	margin: 3rem auto;
 }
 
+/* ---------------------------------------------
+	header, page wrapper, and footer
+--------------------------------------------- */
+.page-wrapper,
+.header-menu-wrapper,
+.footer-top,
+.footer-bottom {
+	padding: 0 1rem;
+}
+
 @media (min-width: 37.5em) {
-	.page-wrapper {
+	.page-wrapper,
+	.header-menu-wrapper,
+	.footer-top,
+	.footer-bottom {
 		max-width: 90em;
+		margin: 0 auto;
 	}
 }
 /*--------------------------------------------------------------
@@ -768,30 +784,45 @@ textarea {
 /* added by Makiko: start*/
 .site-header {
 	background-color: #677589;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-	position: absolute;
+	position: fixed;
 	left: 0;
 	right: 0;
 	z-index: 999;
 }
-.site-header svg {
+
+.header-menu-wrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+.header-menu-wrapper svg {
 	fill: #F5FEFD;
 }
-.site-header .custom-logo-link {
+.header-menu-wrapper .custom-logo-link {
 	width: 6rem;
+}
+.header-menu-wrapper .site-menu {
+	display: flex;
+	flex-direction: row-reverse;
+}
+.header-menu-wrapper button {
+	background-color: transparent;
+	border: none;
+}
+.header-menu-wrapper .menu-toggle {
+	padding: 0.5rem 0 0.5rem 1rem;
+}
+.header-menu-wrapper .open-modal {
+	border: 1px solid #F5FEFD;
+	color: #F5FEFD;
+	border-radius: unset;
+	padding: 0.5rem 1rem;
 }
 
 .main-navigation {
 	width: -moz-fit-content;
 	width: fit-content;
-}
-
-.menu-toggle {
-	background-color: transparent;
-	border: none;
 }
 
 .main-navigation ul {
@@ -811,7 +842,7 @@ textarea {
 	text-align: center;
 }
 
-@media screen and (min-width: 37.5em) {
+@media (min-width: 37.5em) {
 	.menu-toggle {
 		display: none;
 	}
@@ -822,6 +853,9 @@ textarea {
 	}
 	.main-navigation ul a {
 		font-size: 1.5rem;
+	}
+	.site-header .site-menu {
+		flex-direction: row;
 	}
 }
 /* Content
@@ -865,17 +899,34 @@ textarea {
 	margin: 0;
 	text-align: center;
 }
+.site-footer .footer-top .menu {
+	justify-content: flex-start;
+	gap: 1rem;
+}
 .site-footer .footer-bottom {
 	display: flex;
 	flex-direction: column-reverse;
 	gap: 1rem;
-	border-top: 1px solid #F5FEFD;
 }
 
 .footer-top, .footer-bottom {
-	padding: 2rem 0;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
 }
 
+.footer-border {
+	border-top: 1px solid #F5FEFD;
+}
+
+@media (min-width: 37.5em) {
+	.site-footer .footer-bottom {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	.site-footer .footer-bottom .menu {
+		gap: 1rem;
+	}
+}
 /* Comments
 --------------------------------------------- */
 .comment-content a {
