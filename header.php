@@ -26,44 +26,48 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'boldly-built' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			?>
-		</div><!-- .site-branding -->
+		<div class="header-menu-wrapper">
+			<div class="site-branding">
+				<?php
+				the_custom_logo();
+				?>
+			</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-				<span class="screen-reader-text"><?php esc_html_e( 'Menu', 'project-nc' ); ?></span>
-				<?php get_template_part('images/hamburger', 'menu-thin'); ?>
-				<path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"/>
-				</svg>
-			</button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'header',
-					'menu_id'        => 'Header Menu',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
-		<button type='button' class='open-modal'>Contact Us</button>
-			<!-- modal -->
-			<section class="modal">
-			<span class="modal-backdrop close-modal"></span>
-			<section class="modal-content">
-				<section class="modal-header">
-				<h2 class="modal-title">Modal Title</h2><button class="close-modal">&times</button>
-				</section>
-				<section class="modal-body">
+			<div class="site-menu">
+				<nav id="site-navigation" class="main-navigation">
+					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+						<span class="screen-reader-text"><?php esc_html_e( 'Menu', 'project-nc' ); ?></span>
+						<?php get_template_part('images/hamburger', 'menu-thin'); ?>
+						<path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"/>
+						</svg>
+					</button>
 					<?php
-						echo do_shortcode( '[contact-form-7 id="97" title="contact us form"]' );
+					wp_nav_menu(
+						array(
+							'theme_location' => 'header',
+							'menu_id'        => 'Header Menu',
+						)
+					);
 					?>
+				</nav><!-- #site-navigation -->
+				<button type='button' class='open-modal'>Contact Us</button>
+				<!-- modal -->
+				<section class="modal">
+					<span class="modal-backdrop close-modal"></span>
+					<section class="modal-content">
+						<section class="modal-header">
+							<h2 class="modal-title">Modal Title</h2><button class="close-modal">&times</button>
+						</section>
+						<section class="modal-body">
+							<?php
+								echo do_shortcode( '[contact-form-7 id="97" title="contact us form"]' );
+							?>
+						</section>
+						<div class="modal-footer">
+							<button class="close-modal">Cancel</button>
+						</div>
+					</section>
 				</section>
-				<div class="modal-footer">
-				<button class="close-modal">Cancel</button>
-				</div>
-			</section>
-			</section>
+			</div>
+		</div>
 	</header><!-- #masthead -->

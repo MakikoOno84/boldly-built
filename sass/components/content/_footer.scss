@@ -9,6 +9,7 @@
         padding: 0;
         display: flex;
         justify-content: space-between;
+        text-transform:uppercase ;
         a {
             text-decoration: none;
             color: $white;
@@ -20,15 +21,33 @@
         text-align: center;
     }
 
+    .footer-top .menu {
+        justify-content: flex-start;
+        gap: 1rem;
+    }
     .footer-bottom {
         display: flex;
         flex-direction: column-reverse;
         gap: 1rem;
-        border-top: 1px solid $white;
     }
 
 }
 
 .footer-top,.footer-bottom {
-    padding: 2rem 0;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.footer-border {
+    border-top: 1px solid $white;
+}
+
+@media (min-width: 37.5em) {
+    .site-footer .footer-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+        .menu {
+            gap: 1rem;
+        }
+    }
 }
