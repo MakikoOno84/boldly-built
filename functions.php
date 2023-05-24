@@ -188,3 +188,20 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * Load contact us image fo background css.
+ */
+function contact_us_img() { ?>
+    <style type="text/css">
+		#contact-us::before {
+			content: '';
+			display: inline-block;
+			background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/contact-img.jpg);
+			background-size: cover;
+			background-position: bottom;
+			width: 100%;
+			height: 200px;
+		};
+    </style>
+<?php }
+add_action( 'wp_enqueue_scripts', 'contact_us_img' );
