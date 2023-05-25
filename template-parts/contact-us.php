@@ -28,5 +28,4 @@
               echo do_shortcode( '[contact-form-7 id="97" title="contact us form"]' );
           ?>
     </section>
-  </section>
 </section>
