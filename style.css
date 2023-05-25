@@ -1371,7 +1371,6 @@ textarea {
 }
 /* Modal
 --------------------------------------------- */
-/* Simple page styles */
 .modal {
 	display: flex;
 	justify-content: center;
@@ -1382,6 +1381,12 @@ textarea {
 	visibility: hidden;
 	opacity: 0;
 	transition: all 0.3s ease;
+}
+.modal .modal-backdrop {
+	background: rgba(0, 0, 0, 0.7);
+	height: 100%;
+	width: 100%;
+	position: fixed;
 }
 .modal .modal-content {
 	background: #fff;
@@ -1413,11 +1418,6 @@ textarea {
 }
 .modal .modal-body {
 	padding: 0 1.5rem;
-}
-.modal .modal-footer {
-	border-top: 1px solid #ccc;
-	padding: 1rem;
-	text-align: right;
 }
 .modal.visible {
 	opacity: 1;
