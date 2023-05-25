@@ -1205,34 +1205,35 @@ textarea {
 	display: block;
 	border-radius: 5%;
 }
-#home-feature p {
-	margin: 2em auto;
-	max-width: 90%;
-}
 
 .descr-box {
 	background-color: #677589;
 	padding: 3em;
+	margin-top: 2em;
 }
 .descr-box p {
 	color: #F5FEFD;
+	line-height: 2.5em;
 }
 
 @media (min-width: 768px) {
 	.feature-wrapper {
-		position: relative;
-		max-width: 90%;
-		margin: 0 auto;
+		display: grid;
+		grid-template-columns: repeat(9, 1fr);
+		grid-template-rows: repeat(8, 1fr);
+		grid-column-gap: 0px;
+		grid-row-gap: 0px;
 	}
 	.feature-wrapper img {
-		position: absolute;
-		z-index: 1;
-		top: 2.5em;
+		grid-area: 3/1/7/5;
+		z-index: 5;
 	}
 	.feature-wrapper .descr-box {
-		position: relative;
-		width: 50%;
-		left: 34em;
+		grid-area: 2/4/8/10;
+	}
+	.feature-wrapper .descr-box p {
+		margin: 0 0 0 5em;
+		line-height: 2.5em;
 	}
 }
 /* Template Parts
