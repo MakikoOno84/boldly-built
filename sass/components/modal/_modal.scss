@@ -62,12 +62,12 @@
     opacity: 0;
     transition: all 0.3s ease;
   
-    .modal-backdrop {
-      background: rgba(#000, 0.7);
-      height: 9999em;
-      width: 99999em;
-      position: fixed;
-    }
+    // .modal-backdrop {
+    //   background: rgba(#000, 0.7);
+    //   height: 9999em;
+    //   width: 99999em;
+    //   position: fixed;
+    // }
   
     .modal-content {
       background: #fff;
@@ -114,8 +114,6 @@
     &.visible {
       opacity: 1;
       visibility: visible;
-  
-
     }
   }
   

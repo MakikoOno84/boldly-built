@@ -1383,12 +1383,6 @@ textarea {
 	opacity: 0;
 	transition: all 0.3s ease;
 }
-.modal .modal-backdrop {
-	background: rgba(0, 0, 0, 0.7);
-	height: 9999em;
-	width: 99999em;
-	position: fixed;
-}
 .modal .modal-content {
 	background: #fff;
 	border-radius: 5px;
