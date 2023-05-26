@@ -1207,9 +1207,10 @@ textarea {
 }
 
 .descr-box {
-	background-color: #677589;
+	background-color: #c9d3e3;
 	padding: 3em;
 	margin-top: 2em;
+	border-radius: 5%;
 }
 .descr-box p {
 	color: #F5FEFD;
