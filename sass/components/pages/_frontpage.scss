@@ -54,9 +54,10 @@
 }
 
 .descr-box {
-    background-color: $grey;
+    background-color: $lightGrey;
     padding: 3em;
     margin-top: 2em;
+    border-radius: 5%;
     
     p {
         color: $white;
