@@ -10,12 +10,12 @@
     opacity: 0;
     transition: all 0.3s ease;
   
-    // .modal-backdrop {
-    //   background: rgba(#000, 0.7);
-    //   height: 100%;
-    //   width: 100%;
-    //   position: fixed;
-    // }
+    .modal-backdrop {
+      background: rgba(#000, 0.7);
+      height: 190%;
+      width: 195%;
+      position: fixed;
+    }
   
     .modal-content {
       background: #fff;
@@ -34,7 +34,12 @@
       align-items: center;
       border-bottom: 1px solid #ccc;
       padding: .5rem;
-  
+      
+      h2 {
+        margin: auto;
+        padding: 0.5em 0;
+        text-transform: uppercase;
+      }
       .close-modal {
         font-size: 2rem;
         padding: 0;
