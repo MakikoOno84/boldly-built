@@ -1213,7 +1213,7 @@ textarea {
 	border-radius: 5%;
 }
 .descr-box p {
-	color: #F5FEFD;
+	color: #002D62;
 	line-height: 2.5em;
 }
 
@@ -1386,8 +1386,8 @@ textarea {
 }
 .modal .modal-backdrop {
 	background: rgba(0, 0, 0, 0.7);
-	height: 100%;
-	width: 100%;
+	height: 190%;
+	width: 195%;
 	position: fixed;
 }
 .modal .modal-content {
@@ -1396,7 +1396,7 @@ textarea {
 	transition: all 0.6s ease;
 	z-index: 1000;
 	position: absolute;
-	top: 400%;
+	top: 390%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
@@ -1406,6 +1406,11 @@ textarea {
 	align-items: center;
 	border-bottom: 1px solid #ccc;
 	padding: 0.5rem;
+}
+.modal .modal-header h2 {
+	margin: auto;
+	padding: 0.5em 0;
+	text-transform: uppercase;
 }
 .modal .modal-header .close-modal {
 	font-size: 2rem;

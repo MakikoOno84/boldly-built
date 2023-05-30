@@ -18,7 +18,6 @@
 
 
 <section class="modal">
-<span class="modal-backdrop close-modal"></span>
   <section class="modal-content">
     <section class="modal-header">
       <h2 class="modal-title">Let's chat!</h2><button class="close-modal">&times</button>
