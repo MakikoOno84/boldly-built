@@ -3,10 +3,10 @@
 	grid-template-columns: 1fr minmax(0, 1920px) 1fr;
 	grid-template-areas:
 		". header ."
-		". main. "
+		". main ."
 		". footer .";
 	background-color: $white;
-	}
+};
 
 .site-header {
 	grid-area: header;
