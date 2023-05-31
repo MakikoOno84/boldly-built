@@ -201,6 +201,7 @@ function contact_us_img() { ?>
 			background-position: bottom;
 			width: 100%;
 			height: 200px;
+			filter: brightness(.6);
 		};
     </style>
 <?php }
