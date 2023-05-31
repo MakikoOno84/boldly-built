@@ -34,15 +34,26 @@ get_header();
 						<?php while ( have_rows('tech_used') ) : the_row(); ?>
 
 						<?php 	$groupHeading = get_sub_field('group_heading');
+								$techDesc     = get_sub_field('tech_desc');
 								$techOne 	  = get_sub_field('tech_one');
 								$techTwo	  = get_sub_field('tech_two');
-								$techThree 	  = get_sub_field('tech_three'); ?>
+								$techThree 	  = get_sub_field('tech_three'); 
+								$techBg 	  = get_sub_field('tech_bg'); ?>
 
-							<h2><?php echo $groupHeading ?></h2>
-							<p><?php echo $techOne ?></p>
-							<p><?php echo $techTwo ?></p>
-							<p><?php echo $techThree ?></p>
+							<section>
+								<h2><?php echo $groupHeading ?></h2>
+								<p><?php echo $techDesc ?></p>
+								<ul class='tech-list'>
+									<li><?php echo $techOne ?></li>
+									<li><?php echo $techTwo ?></li>
+									<li><?php echo $techThree ?></li>
+								</ul>
+							</section>
 
+							<section class='tech-bg' style="background-image: url(<?php echo $techBg; ?>);">
+								<h3 class='tech-bg-heading'>Endless Posibilities</h3>
+							</section>
+							
 					<?php endwhile ?>
 				<?php endif ?>
 			<?php endif ?>
