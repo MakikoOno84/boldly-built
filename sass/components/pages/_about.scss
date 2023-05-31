@@ -1,17 +1,17 @@
 .about-article {
     display: flex;
     flex-direction: column-reverse;
-    // img {
-    //     display: block;
-    //     margin: 0 auto;
+    img {
+        display: block;
+        margin: 0 auto;
     //     max-width: 400px;
-    // }
+    }
     hr {
         border-top: solid 1px $grey;
     }
 }
-
-@media screen and (min-width: 37.5em) {
+// break point at 900px
+@media screen and (min-width: 56.25em) {
     .about-message {
         text-align: center;
     }
@@ -40,8 +40,8 @@
             max-width: 40%;
         }
         img {
-            display: block;
-            margin: 0 auto;
+            // display: block;
+            // margin: 0 auto;
             max-width: 400px;
         }
         h2 {

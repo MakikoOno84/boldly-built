@@ -419,6 +419,13 @@ h1 {
 	font-weight: bold;
 }
 
+.header-menu-wrapper,
+.header-menu-wrapper button,
+.footer-top,
+.footer-bottom {
+	font-family: "Alegreya Sans", sans-serif;
+}
+
 @media (min-width: 48em) {
 	h2,
 	h3,
@@ -708,6 +715,7 @@ textarea {
 	.footer-top,
 	.footer-bottom {
 		margin: 0 auto;
+		max-width: 90em;
 	}
 }
 /*--------------------------------------------------------------
@@ -1152,11 +1160,15 @@ textarea {
 	display: flex;
 	flex-direction: column-reverse;
 }
+.about-article img {
+	display: block;
+	margin: 0 auto;
+}
 .about-article hr {
 	border-top: solid 1px #677589;
 }
 
-@media screen and (min-width: 37.5em) {
+@media screen and (min-width: 56.25em) {
 	.about-message {
 		text-align: center;
 	}
@@ -1186,8 +1198,6 @@ textarea {
 		max-width: 40%;
 	}
 	.about-article img {
-		display: block;
-		margin: 0 auto;
 		max-width: 400px;
 	}
 	.about-article h2 {
