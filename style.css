@@ -410,12 +410,20 @@ h1 {
 	font-size: 1.3rem;
 	clear: both;
 	color: #002D62;
+	text-align: center;
 }
 
 .h1 {
 	font-family: "Alegreya Sans", sans-serif;
 	font-size: 3rem;
 	font-weight: bold;
+}
+
+.header-menu-wrapper,
+.header-menu-wrapper button,
+.footer-top,
+.footer-bottom {
+	font-family: "Alegreya Sans", sans-serif;
 }
 
 @media (min-width: 48em) {
@@ -707,6 +715,7 @@ textarea {
 	.footer-top,
 	.footer-bottom {
 		margin: 0 auto;
+		max-width: 90em;
 	}
 }
 /*--------------------------------------------------------------
@@ -837,7 +846,6 @@ textarea {
 	right: 0;
 	z-index: 999;
 	background-color: #677589;
-	text-transform: uppercase;
 }
 .main-navigation ul a {
 	color: #F5FEFD;
@@ -1202,14 +1210,56 @@ textarea {
 		width: 65%;
 	}
 }
-@media screen and (min-width: 37.5em) {
+.about-article {
+	display: flex;
+	flex-direction: column-reverse;
+}
+.about-article img {
+	display: block;
+	margin: 0 auto;
+}
+.about-article hr {
+	border-top: solid 1px #677589;
+}
+
+@media screen and (min-width: 56.25em) {
+	.about-message {
+		text-align: center;
+	}
 	.about-article {
+		display: block;
+		flex-direction: unset;
+		position: relative;
+		max-width: 1000px;
+		margin: 0 auto;
+	}
+	.about-article .floating-top {
+		position: relative;
 		display: flex;
-		gap: 1rem;
-		align-items: flex-start;
+		flex-direction: column;
+		z-index: 2;
+		margin-left: 33%;
+		margin-bottom: 30%;
+	}
+	.about-article .floating-top p {
+		padding: 10% 0;
+		padding-left: 20%;
+	}
+	.about-article .floating-bottom {
+		position: absolute;
+		top: 0;
+		display: flex;
+		max-width: 40%;
+	}
+	.about-article img {
+		max-width: 400px;
 	}
 	.about-article h2 {
-		margin-top: 0;
+		font-size: 2rem;
+	}
+	.about-article hr {
+		width: 300px;
+		margin: 0;
 	}
 }
 #home-expertise p,
@@ -1259,34 +1309,36 @@ textarea {
 	display: block;
 	border-radius: 5%;
 }
-#home-feature p {
-	margin: 2em auto;
-	max-width: 90%;
-}
 
 .descr-box {
-	background-color: #677589;
+	background-color: #c9d3e3;
 	padding: 3em;
+	margin-top: 2em;
+	border-radius: 5%;
 }
 .descr-box p {
-	color: #F5FEFD;
+	color: #002D62;
+	line-height: 2.5em;
 }
 
 @media (min-width: 768px) {
 	.feature-wrapper {
-		position: relative;
-		max-width: 90%;
-		margin: 0 auto;
+		display: grid;
+		grid-template-columns: repeat(9, 1fr);
+		grid-template-rows: repeat(8, 1fr);
+		grid-column-gap: 0px;
+		grid-row-gap: 0px;
 	}
 	.feature-wrapper img {
-		position: absolute;
-		z-index: 1;
-		top: 2.5em;
+		grid-area: 3/1/7/5;
+		z-index: 5;
 	}
 	.feature-wrapper .descr-box {
-		position: relative;
-		width: 50%;
-		left: 34em;
+		grid-area: 2/4/8/10;
+	}
+	.feature-wrapper .descr-box p {
+		margin: 0 0 0 5em;
+		line-height: 2.5em;
 	}
 }
 /* Template Parts
@@ -1426,15 +1478,12 @@ textarea {
 }
 /* Modal
 --------------------------------------------- */
-/* Simple page styles */
 .modal {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	height: 100%;
 	padding: 2rem;
-	position: fixed;
-	top: 0;
 	width: 100%;
 	visibility: hidden;
 	opacity: 0;
@@ -1442,25 +1491,31 @@ textarea {
 }
 .modal .modal-backdrop {
 	background: rgba(0, 0, 0, 0.7);
-	height: 100%;
-	width: 100%;
+	height: 190%;
+	width: 195%;
 	position: fixed;
 }
 .modal .modal-content {
 	background: #fff;
 	border-radius: 5px;
-	max-width: 600px;
-	position: fixed;
-	top: -100%;
 	transition: all 0.6s ease;
 	z-index: 1000;
+	position: absolute;
+	top: 390%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 .modal .modal-header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	border-bottom: 1px solid #ccc;
-	padding: 1.5rem;
+	padding: 0.5rem;
+}
+.modal .modal-header h2 {
+	margin: auto;
+	padding: 0.5em 0;
+	text-transform: uppercase;
 }
 .modal .modal-header .close-modal {
 	font-size: 2rem;
@@ -1474,19 +1529,16 @@ textarea {
 	color: #000;
 }
 .modal .modal-body {
-	padding: 1.5rem;
-}
-.modal .modal-footer {
-	border-top: 1px solid #ccc;
-	padding: 1rem;
-	text-align: right;
+	padding: 0 1.5rem;
 }
 .modal.visible {
 	opacity: 1;
 	visibility: visible;
 }
-.modal.visible .modal-content {
-	top: 10%;
+
+.wpcf7-form textarea {
+	width: 100% !important;
+	height: 8em;
 }
 
 /*--------------------------------------------------------------
