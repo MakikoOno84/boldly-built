@@ -50,13 +50,15 @@
 					);
 					?>
 				</nav><!-- #site-navigation -->
-				<button type='button' class='open-modal'>Contact Us</button>
+				<button type='button' class='open-modal'><?php esc_html_e('Contact','boldly-built');?></button>
 				<!-- modal -->
 				<section class="modal">
 					<span class="modal-backdrop"></span>
 					<section class="modal-content">
 					<section class="modal-header">
-      					<h2 class="modal-title">Let's chat!</h2><button class="close-modal">&times</button>
+      					<h2 class="modal-title">
+						  <?php esc_html_e("Let's chat!",'boldly-built');?>
+							  </h2><button class="close-modal">&times</button>
     				</section>
 						<section class="modal-body">
 							<?php
