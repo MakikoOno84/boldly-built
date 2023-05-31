@@ -97,4 +97,8 @@ package-lock.json
 
 *.css.map
 *.map
+<<<<<<< HEAD
 style.css
+=======
+style.css
+>>>>>>> 8a0b4c83738b119c0f275279bbfc609594c72df4

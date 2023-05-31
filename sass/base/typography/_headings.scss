@@ -13,6 +13,7 @@ h1 {
 	font-size: $font__mobile_heading_one;
 	clear: both;
 	color: $blue;
+	text-align: center;
 }
 
 // use for fake h1
@@ -20,6 +21,14 @@ h1 {
 	font-family: $font__heading;
 	font-size: $font__banner_heading_mobile;
 	font-weight: bold;
+}
+
+// use for menu 
+.header-menu-wrapper,
+.header-menu-wrapper button,
+	.footer-top,
+	.footer-bottom {
+		font-family: $font__heading;
 }
 
 @media (min-width: 48em) {
