@@ -91,3 +91,10 @@ package-lock.json
 *.swp
 *.vi
 *~
+
+# Ignore compiled CSS from repository #
+#####################
+
+*.css.map
+*.map
+style.css
