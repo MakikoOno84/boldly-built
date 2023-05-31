@@ -10,6 +10,9 @@
     hr {
         border-top: solid 1px $grey;
     }
+    h2 {
+        font-size: 2rem;
+    }
 }
 // break point at 900px
 @media screen and (min-width: 56.25em) {
@@ -47,7 +50,7 @@
         }
         h2 {
             // margin-top:0;
-            font-size: 2rem;
+            font-size: 4rem;
         }
         hr {
             width: 300px;

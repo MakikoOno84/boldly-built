@@ -1221,6 +1221,9 @@ textarea {
 .about-article hr {
 	border-top: solid 1px #677589;
 }
+.about-article h2 {
+	font-size: 2rem;
+}
 
 @media screen and (min-width: 56.25em) {
 	.about-message {
@@ -1255,7 +1258,7 @@ textarea {
 		max-width: 400px;
 	}
 	.about-article h2 {
-		font-size: 2rem;
+		font-size: 4rem;
 	}
 	.about-article hr {
 		width: 300px;
