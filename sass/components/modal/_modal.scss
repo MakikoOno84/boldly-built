@@ -3,14 +3,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    visibility: hidden;
-    opacity: 0;
+    display: none;
     transition: all 0.3s ease;
   
     .modal-backdrop {
       background: rgba(#000, 0.7);
       height: 190%;
-      width: 200%;
+      left: 0;
+      width: 100%;
       position: fixed;
     }
   
@@ -56,8 +56,7 @@
     }
   
     &.visible {
-      opacity: 1;
-      visibility: visible;
+display: block;
     }
   }
   
