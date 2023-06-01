@@ -50,7 +50,7 @@
 					);
 					?>
 				</nav><!-- #site-navigation -->
-				<button type='button' class='open-modal'>Contact Us</button>
+				<button type='button' class='open-modal'>Contact</button>
 				<!-- modal -->
 				<section class="modal">
 					<span class="modal-backdrop"></span>
