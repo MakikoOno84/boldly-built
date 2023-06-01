@@ -8,6 +8,7 @@
 .service-wrapper {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 .service-block {
     display: inline-block;
@@ -15,7 +16,6 @@
     border-radius: 5%;
     margin: 1em;
  
-
     img {
         height: 10em;
         width: 18em;
