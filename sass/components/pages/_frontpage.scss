@@ -44,7 +44,7 @@
         display: block;
     }
     img {
-        max-width: 90%;
+        max-width: 100%;
         margin: 0 auto;
         display: block;
         border-radius: 5%;
@@ -56,7 +56,7 @@
 .descr-box {
     background-color: $lightGrey;
     padding: 3em;
-    margin-top: 2em;
+    margin-top: 1em;
     border-radius: 5%;
     
     p {
@@ -75,11 +75,11 @@
         
 
         img {
-            grid-area: 3 / 1 / 7 / 5;
+            grid-area: 2 / 1 / 7 / 5;
             z-index: 5;
         }
         .descr-box {
-            grid-area: 2 / 4 / 8 / 10; 
+            grid-area: 1 / 4 / 8 / 10; 
 
             p {
                 margin: 0 0 0 5em;
