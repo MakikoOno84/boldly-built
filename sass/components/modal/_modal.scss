@@ -10,7 +10,7 @@
     .modal-backdrop {
       background: rgba(#000, 0.7);
       height: 190%;
-      width: 195%;
+      width: 200%;
       position: fixed;
     }
   
@@ -20,9 +20,9 @@
       transition: all 0.6s ease;
       z-index: 1000;
       position: absolute;
-      top: 390%;
       left: 50%;
-      transform: translate(-50%, -50%);
+      top:-300%;
+      transform: translate(-50%, 60%);
     }
   
     .modal-header {
