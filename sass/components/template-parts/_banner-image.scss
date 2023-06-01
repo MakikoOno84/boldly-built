@@ -30,7 +30,7 @@
 
 .hero-text {
     position: absolute;
-    top: 10%;
+    top: 40%;
     height: fit-content;
     color: $white;
     z-index: 3;
@@ -40,7 +40,7 @@
 
 @media (min-width: 48em) {
     .hero-text {
-        top: 0;
+        top: 100px;
         max-width: 75%;
         padding-left: 2rem;
         padding-right: 2rem;
@@ -56,5 +56,6 @@
 
     .hero-text {
         max-width: 60%;
+        top: 10%;
     }
 }
