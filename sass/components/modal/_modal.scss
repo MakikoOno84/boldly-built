@@ -20,7 +20,7 @@
     }
   
     .modal-content {
-      background: #fff;
+      background: $white;
       border-radius: 5px;
       transition: all 0.6s ease;
       z-index: 1000;
@@ -75,6 +75,38 @@ display: block;
     width: 100% !important;
     height:5em;
 }
+
+.wpcf7 input[type="submit"] {
+    display: block;
+    text-align: center;
+    background-color: $white;
+    border: 1px solid $blue;
+    color: $blue;
+    width: 7em;
+    padding: 0.5em;
+    margin:  auto;
+    text-decoration: none;
+    border-radius: unset;
+}
+.wpcf7 input:hover[type="submit"] {
+  background-color: $blue;
+  color: $white;
+  transition: all 0.4s ease 0s;
+}
+.wpcf7 input:active[type="submit"] {
+  background-color: $blue;
+  color: $white;
+}
+
+//     display: block;
+//     text-align: center;
+//     border: 1px solid $blue;
+//     color: $blue;
+//     width: 7em;
+//     padding: 0.5em;
+//     margin: 2em auto;
+//     text-decoration: none;
+// } 
 
 // breakpoint at 600px
 @media (min-width: 37.5rem) {
