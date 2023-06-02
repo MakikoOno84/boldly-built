@@ -117,6 +117,9 @@
 	left: 0;
 	right: 0;
 	z-index: 999;
+	.current_page_item a{
+		color: $blue;
+	}
 }
 .header-menu-wrapper {
 	display: flex;
