@@ -3,6 +3,21 @@
     h2 {
         text-align: center;
     }
+    a {
+        display: block;
+        text-align: center;
+        border: 1px solid $blue;
+        color: $blue;
+        width: 7em;
+        padding: 0.5em;
+        margin: 2em auto;
+        text-decoration: none;
+
+    }
+    a:hover, a:active {
+        background-color: $blue;
+        color: $white;
+        }
 }
 
 .service-wrapper {
@@ -31,6 +46,16 @@
 .expertise-button {
     display: block;
     text-align: center;
+    border: 1px solid $blue;
+    color: $blue;
+    width: 7em;
+    padding: 0.5em;
+    margin: 2em auto;
+    text-decoration: none;
+    a:hover, a:active {
+        background-color: $blue;
+        color: $white
+    }
 }
 
 #home-feature{
