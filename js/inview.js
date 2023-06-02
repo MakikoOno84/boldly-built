@@ -1,3 +1,10 @@
+/**
+ * File inview.js.
+ *
+ * Check if an element is visible in viewport when scrolling a page
+ * and apply a class name from animation.css.
+ * 
+ */
 
 jQuery('.fadeInUpTrigger').on('inview', function(event, isInView) {
     if (isInView) {//when an element is in view
