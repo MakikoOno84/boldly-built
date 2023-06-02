@@ -28,7 +28,7 @@ get_header();
 			<!-- page wrapper: start-->
 			<div class='page-wrapper'>
 			<?php
-			the_title( '<h1 class="entry-title animate__animated animate__swing">', '</h1>' );
+			the_title( '<h1 class="entry-title">', '</h1>' );
 			if ( function_exists('get_field') ) :
 				if ( get_field('message')) :
 					?>
@@ -40,13 +40,13 @@ get_header();
 					if ( get_field('about-message')) :
 						?>
 						<div class="floating-top">
-						<h2><?php echo the_field('about-message'); ?></h2>
+						<h2 class="fadeInUpTrigger"><?php echo the_field('about-message'); ?></h2>
 						<?php
 					endif;
 					if ( get_field('about-paragraph')) :
 						?>
-						<hr class="about-bar">
-						<p><?php echo the_field('about-paragraph'); ?></p>
+						<hr class="about-bar fadeInUpTrigger">
+						<p class="fadeInUpTrigger"><?php echo the_field('about-paragraph'); ?></p>
 					</div>
 						<?php
 					endif;
@@ -56,7 +56,7 @@ get_header();
 						$size = 'large'; // (thumbnail, medium, large, full or custom size)
 						if( $image ) {
 							?><div class="floating-bottom">
-								<div><?php
+								<div class="fadeInUpTrigger"><?php
 								echo wp_get_attachment_image( $image, $size );
 								?></div>
 							</div><?php
