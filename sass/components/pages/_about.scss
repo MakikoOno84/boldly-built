@@ -5,9 +5,13 @@
         display: block;
         margin: 0 auto;
     //     max-width: 400px;
+        filter: opacity(0.7);
     }
     hr {
         border-top: solid 1px $grey;
+    }
+    h2 {
+        font-size: 2rem;
     }
 }
 // break point at 900px
@@ -46,7 +50,7 @@
         }
         h2 {
             // margin-top:0;
-            font-size: 2rem;
+            font-size: 4rem;
         }
         hr {
             width: 300px;
