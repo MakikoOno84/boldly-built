@@ -1,10 +1,8 @@
 
-
-//1つめの動き
 jQuery('.fadeInUpTrigger').on('inview', function(event, isInView) {
-    if (isInView) {//表示領域に入った時
-        jQuery(this).addClass('animate__animated animate__fadeInUp delay-time');//クラス名が付与
-    } else {//表示領域から出た時
-        jQuery(this).removeClass('animate__animated animate__fadeInUp delay-time');//クラス名が除去
+    if (isInView) {//when an element is in view
+        jQuery(this).addClass('animate__animated animate__fadeInUp delay-time');//add class name
+    } else {//when an element is out of view
+        jQuery(this).removeClass('animate__animated animate__fadeInUp delay-time');//remove class name
     }
   });
