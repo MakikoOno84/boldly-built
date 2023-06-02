@@ -13,3 +13,8 @@ img {
 figure {
 	margin: 1em 0; // Extra wide images within figure tags don't overflow the content area.
 }
+
+.rounded-corner {
+	border-radius: 1em;
+	box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
+}

@@ -19,7 +19,7 @@
 }
 
 .contact-text {
-    color: $grey;
+    color: $white;
 }
 
 .contact-btn {
@@ -34,6 +34,12 @@
     text-transform: uppercase;
     font-family: $font__heading;
     text-align: center;
+}
+
+.contact-btn:hover {
+    background: $white;
+    color: $blue;
+    border: 0.3em solid $blue;
 }
 
 @media (min-width: 48em) {
