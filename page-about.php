@@ -28,7 +28,7 @@ get_header();
 			<!-- page wrapper: start-->
 			<div class='page-wrapper'>
 			<?php
-			the_title( '<h1 class="entry-title">', '</h1>' );
+			the_title( '<h1 class="entry-title animate__animated animate__swing">', '</h1>' );
 			if ( function_exists('get_field') ) :
 				if ( get_field('message')) :
 					?>
