@@ -1,17 +1,22 @@
 
 .modal {
-    display: flex;
     justify-content: center;
     align-items: center;
     display: none;
     transition: all 0.3s ease;
-  
     .modal-backdrop {
       background: rgba(#000, 0.7);
       height: 190%;
       left: 0;
       width: 100%;
       position: fixed;
+      top: 0;
+    }
+
+    // 
+    input {
+      // box-sizing: border-box;
+      width: 100%;
     }
   
     .modal-content {
@@ -20,9 +25,15 @@
       transition: all 0.6s ease;
       z-index: 1000;
       position: absolute;
-      left: 50%;
-      top:-300%;
-      transform: translate(-50%, 60%);
+      max-height: 40rem  ; // 556px
+      // left: 50%;
+      // top:-300%;
+      // transform: translate(-50%, 60%);
+      top: 2rem;
+      left: 0;
+      right: 0;
+      margin: 0 1rem;
+      max-width: 37.5rem; // 600px
     }
   
     .modal-header {
@@ -62,5 +73,15 @@ display: block;
   
   .wpcf7-form textarea{ 
     width: 100% !important;
-    height:8em;
+    height:5em;
+}
+
+// breakpoint at 600px
+@media (min-width: 37.5rem) {
+  .modal {
+    .modal-content {
+      margin: 0 auto;    
+    }
+  }
+
 }
