@@ -62,6 +62,7 @@ get_header();
 					if ( get_field('image')) :
 						$image = get_field('image');
 						$size = 'large'; // (thumbnail, medium, large, full or custom size)
+						// $default_attr = array("class" => "zoomOut");
 						if( $image ) {
 							?><div class="floating-bottom">
 								<div class="fadeInUpTrigger"><?php

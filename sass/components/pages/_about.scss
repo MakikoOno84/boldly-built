@@ -16,6 +16,9 @@
         font-size: 2rem;
     }
 }
+.about-message {
+    margin-bottom: 5rem;
+}
 // break point at 900px
 @media screen and (min-width: 56.25em) {
     .about-message {
@@ -33,7 +36,7 @@
             flex-direction: column;
             z-index: 2;
             margin-left: 33%;
-            margin-bottom: 30%;
+            margin-bottom: 20%;
             p {
                 padding:10% 0;
                 padding-left: 20%;
