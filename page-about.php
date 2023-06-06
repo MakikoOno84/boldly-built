@@ -40,7 +40,15 @@ get_header();
 					if ( get_field('about-message')) :
 						?>
 						<div class="floating-top">
-						<h2 class="fadeInUpTrigger"><?php echo the_field('about-message'); ?></h2>
+						<h2 class="fadeInUpTrigger">
+							<?php 
+								echo the_field('about-message'); 
+							?>
+							<!-- <div class="fadeInUpTrigger">A creative digital agency</div>
+							<div class="fadeInUpTrigger">based in Vancouver</div>
+							<div class="fadeInUpTrigger">since 2022</div> -->
+						
+						</h2>
 						<?php
 					endif;
 					if ( get_field('about-paragraph')) :
