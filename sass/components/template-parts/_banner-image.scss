@@ -30,7 +30,7 @@
 
 .hero-text {
     position: absolute;
-    top: 40%;
+    top: 30%;
     height: fit-content;
     color: $white;
     z-index: 3;
@@ -40,7 +40,7 @@
 
 @media (min-width: 48em) {
     .hero-text {
-        top: 100px;
+        top: 200px;
         max-width: 75%;
         padding-left: 2rem;
         padding-right: 2rem;
@@ -50,12 +50,12 @@
 @media (min-width: 64em) {
     .banner {
         img {
-            height: 75vh;
+            height: 85vh;
         }
     }
 
     .hero-text {
         max-width: 60%;
-        top: 10%;
+        top: 20%;
     }
 }
