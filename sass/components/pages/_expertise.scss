@@ -31,10 +31,11 @@
 
 .tech-bg {
     position: relative;
-    background-size: cover;
-	background-position: center;
+    object-fit: cover;
+	object-position: center;
 	width: 100%;
 	height: 250px;
+    margin-top: 2rem;
 }
 
 #technologies {
@@ -48,6 +49,10 @@
 
 #technologies p {
     line-height: 1.5;
+}
+
+#technologies .animate__animated {
+    --animate-duration: 1.5s;
 }
 
 .tech-bg-heading {
@@ -68,6 +73,7 @@
     line-height: 2;
     color: $lightBlue;
 }
+
 .tech-list li::before {
     display: inline-block;
     background-color: $lightBlue;
@@ -78,6 +84,11 @@
     width: 15px;
     margin-right: 4px;
 }
+
+.hide {
+    opacity: 0;
+}
+
 // screen sizes 768px +
 @media (min-width: 48em) {
     .step-image {
@@ -156,12 +167,13 @@
         display: flex;
         column-gap: 16px;
         justify-content: space-between;
+        margin-top: 100px;
     }
+
     #technologies section p,
     #technologies section ul {
         max-width: 720px;
     }
-
 
     .tech-bg {
         height: 450px;

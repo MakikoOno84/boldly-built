@@ -168,6 +168,8 @@ function boldly_built_scripts() {
 		'boldly-built-jquery-inview2',
 		get_template_directory_uri() . '/js/inview.js', array('boldly-built-jquery-inview1'), _S_VERSION, true );
 
+	// loading intersectionOverserver scripts
+	wp_enqueue_script('boldly-built-intersectionObservation', get_template_directory_uri() . '/js/intersectionObserver.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

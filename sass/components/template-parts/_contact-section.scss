@@ -34,12 +34,17 @@
     text-transform: uppercase;
     font-family: $font__heading;
     text-align: center;
+    transition: all .3s ease-in-out;
+    box-shadow: 0px 22px 48px -12px rgba(0, 45, 98, 0.6)
 }
 
-.contact-btn:hover {
-    background: $white;
+.contact-btn:hover,
+.contact-btn:active {
+    background: $lightGrey;
     color: $blue;
-    border: 0.3em solid $blue;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    // border: 0.3em solid $blue;
+    transform: scale(1.5);
 }
 
 @media (min-width: 48em) {
