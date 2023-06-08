@@ -63,42 +63,21 @@
 				</section>
 			</div>
 		</div>
-		<div id="menu-wrapper-mobile" class="header-menu-wrapper mobile">
-			<div class="menu-top">
-				<div class="site-branding">
-					<?php
-					the_custom_logo();
-					?>
-				</div><!-- .site-branding -->
-				<div class="menu-top-right">
-					<button type='button' class='open-modal'><?php esc_html_e('Contact','boldly-built');?></button>
-					<!-- modal -->
-					<section class="modal">
-						<span class="modal-backdrop"></span>
-						<section class="modal-content">
-						<section class="modal-header">
-							<h2 class="modal-title">
-							<?php esc_html_e("Let's chat!",'boldly-built');?>
-								</h2><button class="close-modal">&times</button>
-						</section>
-							<section class="modal-body">
-								<?php
-									echo do_shortcode( '[contact-form-7 id="97" title="contact us form"]' );
-								?>
-							</section>
-						</section>
-					</section>
-					<button id="menu-button" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-								<span class="screen-reader-text"><?php esc_html_e( 'Menu', 'project-nc' ); ?></span>
-								<?php get_template_part('images/hamburger', 'menu-thin'); ?>
-								<path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"/>
-								</svg>
-					</button>
-				</div>
-			</div>
-			<div class="site-menu menu-bottom">
+		<div class="header-menu-wrapper mobile">
+			<div class="site-branding">
+				<?php
+				the_custom_logo();
+				?>
+			</div><!-- .site-branding -->
+
+			<div class="site-menu">
 				<nav id="site-navigation" class="main-navigation">
-					
+					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+						<span class="screen-reader-text"><?php esc_html_e( 'Menu', 'project-nc' ); ?></span>
+						<?php get_template_part('images/hamburger', 'menu-thin'); ?>
+						<path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"/>
+						</svg>
+					</button>
 					<?php
 					wp_nav_menu(
 						array(
@@ -108,7 +87,23 @@
 					);
 					?>
 				</nav><!-- #site-navigation -->
-
+				<button type='button' class='open-modal'><?php esc_html_e('Contact','boldly-built');?></button>
+				<!-- modal -->
+				<section class="modal">
+					<span class="modal-backdrop"></span>
+					<section class="modal-content">
+					<section class="modal-header">
+      					<h2 class="modal-title">
+						  <?php esc_html_e("Let's chat!",'boldly-built');?>
+							  </h2><button class="close-modal">&times</button>
+    				</section>
+						<section class="modal-body">
+							<?php
+								echo do_shortcode( '[contact-form-7 id="97" title="contact us form"]' );
+							?>
+						</section>
+					</section>
+				</section>
 			</div>
 		</div>
 	</header><!-- #masthead -->
