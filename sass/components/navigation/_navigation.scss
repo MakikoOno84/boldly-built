@@ -112,13 +112,13 @@
 /* Added for Boldly Built */
 
 .site-header {
-	background-color: $grey;
+	background-color: transparent;
 	position: fixed;
 	left: 0;
 	right: 0;
 	z-index: 999;
 	.current_page_item a{
-		color: $blue;
+		color: $grey;
 	}
 }
 .header-menu-wrapper {
