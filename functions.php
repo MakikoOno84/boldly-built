@@ -160,16 +160,16 @@ function boldly_built_scripts() {
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
 
 	// loading jquery.inview
-	wp_enqueue_script(
-		'boldly-built-jquery-inview1',
-		'https://cdnjs.cloudflare.com/ajax/libs/protonet-jquery.inview/1.1.2/jquery.inview.min.js', array('jquery'), _S_VERSION, true );
+	// wp_enqueue_script(
+	// 	'boldly-built-jquery-inview1',
+	// 	'https://cdnjs.cloudflare.com/ajax/libs/protonet-jquery.inview/1.1.2/jquery.inview.min.js', array('jquery'), _S_VERSION, true );
 
-	wp_enqueue_script(
-		'boldly-built-jquery-inview2',
-		get_template_directory_uri() . '/js/inview.js', array('boldly-built-jquery-inview1'), _S_VERSION, true );
+	// wp_enqueue_script(
+	// 	'boldly-built-jquery-inview2',
+	// 	get_template_directory_uri() . '/js/inview.js', array('boldly-built-jquery-inview1'), _S_VERSION, true );
 
-	// loading intersectionOverserver scripts
-	wp_enqueue_script('boldly-built-intersectionObservation', get_template_directory_uri() . '/js/intersectionObserver.js', array(), _S_VERSION, true );
+	// loading animation scripts
+	wp_enqueue_script('boldly-built-animation', get_template_directory_uri() . '/js/animation.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

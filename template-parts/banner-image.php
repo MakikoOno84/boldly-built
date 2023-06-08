@@ -17,7 +17,7 @@
 		endif;
         if ( function_exists('get_field') ) :
 			if ( get_field('banner-title') ) : ?>
-				<p class='banner-title h1 animate__animated'><?php echo get_field('banner-title') ?></p>
+				<p class='banner-title h1 fadeInUpTitleTrigger'><?php echo get_field('banner-title') ?></p>
 			<?php endif; 
         endif;
         ?>

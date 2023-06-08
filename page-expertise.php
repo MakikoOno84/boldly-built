@@ -41,9 +41,9 @@ get_header();
 								$techBg 	  = get_sub_field('tech_bg'); ?>
 
 							<section>
-								<h2 class='animate__animated hide'><?php echo $groupHeading ?></h2>
-								<p class='animate__animated hide'><?php echo $techDesc ?></p>
-								<ul class='tech-list animate__animated hide'>
+								<h2 class='animate__animated fadeInUpTrigger hide'><?php echo $groupHeading ?></h2>
+								<p class='animate__animated fadeInUpTrigger hide'><?php echo $techDesc ?></p>
+								<ul class='tech-list animate__animated fadeInUpTrigger hide'>
 									<li><?php echo $techOne ?></li>
 									<li><?php echo $techTwo ?></li>
 									<li><?php echo $techThree ?></li>
@@ -52,7 +52,7 @@ get_header();
 
 							<!-- <section class='tech-bg animate__animated hide' style="background-image: url(<?php echo $techBg; ?>);">
 							</section> -->
-							<img class='tech-bg animate__animated hide' src="<?php echo $techBg; ?>" alt="">
+							<img class='tech-bg animate__animated fadeInUpTrigger hide' src="<?php echo $techBg; ?>" alt="">
 							
 					<?php endwhile ?>
 				<?php endif ?>
@@ -68,7 +68,7 @@ get_header();
 			<!-- outputting headings for the steps -->
 			<?php if ( function_exists('have_rows') ) : ?>
 				<?php if ( get_field('step_heading') ) : ?>
-					<h2 class='step-heading animate__animated hide'><?php the_field('step_heading')?></h2>
+					<h2 class='step-heading animate__animated fadeInUpTrigger hide'><?php the_field('step_heading')?></h2>
 				<?php endif ?>
 			<?php endif ?>
 
@@ -82,7 +82,7 @@ get_header();
 								$description = get_sub_field('description');
 								$image = get_sub_field('image'); ?>
 
-						<section class='step<?php echo $step?> steps animate__animated hide'>
+						<section class='step<?php echo $step?> steps animate__animated fadeInUpTrigger hide'>
 								<section>
 									<div class='step-icon'><p>0<?php echo $step?></p></div>
 									<h3 class='step-subheading'><?php echo $title?></h3>
@@ -105,7 +105,7 @@ get_header();
 								$description = get_sub_field('description');
 								$image = get_sub_field('image'); ?>
 						
-						<section class='step<?php echo $step ?> steps animate__animated hide'>
+						<section class='step<?php echo $step ?> steps animate__animated fadeInUpTrigger hide'>
 								<section>
 									<div class='step-icon'><p>0<?php echo $step?></p></div>
 									<h3 class='step-subheading'><?php echo $title?></h3>
@@ -128,7 +128,7 @@ get_header();
 								$description = get_sub_field('description');
 								$image = get_sub_field('image'); ?>
 						
-						<section class='step<?php echo $step ?> steps animate__animated hide'>
+						<section class='step<?php echo $step ?> steps animate__animated fadeInUpTrigger hide'>
 								<section>
 									<div class='step-icon'><p>0<?php echo $step?></p></div>
 									<h3 class='step-subheading'><?php echo $title?></h3>
@@ -151,7 +151,7 @@ get_header();
 								$description = get_sub_field('description');
 								$image = get_sub_field('image'); ?>
 						
-						<section class='step<?php echo $step ?> steps animate__animated hide'>
+						<section class='step<?php echo $step ?> steps animate__animated fadeInUpTrigger hide'>
 								<section>
 									<div class='step-icon'><p>0<?php echo $step?></p></div>
 									<h3 class='step-subheading'><?php echo $title?></h3>

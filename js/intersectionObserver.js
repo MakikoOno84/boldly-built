@@ -1,4 +1,6 @@
-const faders = document.querySelectorAll('.animate__animated');
+
+
+const faders = document.querySelectorAll(targetElement);
 
 const appearOptions = {
     threshold: .6,
@@ -12,7 +14,7 @@ const appearOnScroll = new IntersectionObserver(
                 return;
             } else {
                 entry.target.classList.remove('hide');
-                entry.target.classList.add('animate__fadeInUp');
+                entry.target.classList.add(addClassName);
                 appearOnScroll.unobserve(entry.target)
             }
         })

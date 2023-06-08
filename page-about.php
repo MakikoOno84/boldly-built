@@ -40,21 +40,21 @@ get_header();
 					if ( get_field('about-message')) :
 						?>
 						<div class="floating-top">
-						<h2 class="fadeInUpTrigger">
+						<h2 class="animate__animated">
 							<?php 
 								echo the_field('about-message'); 
 							?>
-							<!-- <div class="fadeInUpTrigger">A creative digital agency</div>
-							<div class="fadeInUpTrigger">based in Vancouver</div>
-							<div class="fadeInUpTrigger">since 2022</div> -->
+							<!-- <div class="animate__animated">A creative digital agency</div>
+							<div class="animate__animated">based in Vancouver</div>
+							<div class="animate__animated">since 2022</div> -->
 						
 						</h2>
 						<?php
 					endif;
 					if ( get_field('about-paragraph')) :
 						?>
-						<hr class="about-bar fadeInUpTrigger">
-						<p class="fadeInUpTrigger"><?php echo the_field('about-paragraph'); ?></p>
+						<hr class="about-bar animate__animated">
+						<p class="animate__animated"><?php echo the_field('about-paragraph'); ?></p>
 					</div>
 						<?php
 					endif;
@@ -65,7 +65,7 @@ get_header();
 						// $default_attr = array("class" => "zoomOut");
 						if( $image ) {
 							?><div class="floating-bottom">
-								<div class="fadeInUpTrigger"><?php
+								<div class="animate__animated"><?php
 								echo wp_get_attachment_image( $image, $size );
 								?></div>
 							</div><?php

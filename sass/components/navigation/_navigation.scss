@@ -139,6 +139,7 @@
 	.site-menu {
 		display: flex;
 		flex-direction: row-reverse;
+		align-items: center;
 	}
 	// reset default style for button
 	button {
@@ -153,7 +154,7 @@
 		border: 1px solid $white;
 		color: $white;
 		border-radius: unset;
-		padding: .5rem 1rem;
+		padding: .5rem 1.5rem;
 	}
 
 }
