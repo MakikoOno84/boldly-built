@@ -2,22 +2,31 @@
 Fade in up
 ---------------------- */
 
-.fadeInUpTrigger{
+.fadeInUpTitleTrigger,
+.animate__animated{
 	opacity: 0;
 }
 
 .change-time{  
-    animation-duration: .5s;
+    animation-duration: 1s;
   }
 
-.fadeInUp{
-  animation-name:fadeInUpAnime;
+.change-delay-200ms {
+  animation-delay: 200ms;
+}
+.change-delay-400ms {
+  animation-delay: 400ms;
+}
+
+.fadeInUpTitle{
+  animation-name:fadeInUpTitleAnime;
   animation-duration:1s;
+  animation-delay: .3s;
   animation-fill-mode:forwards;
   // opacity:0;
   }
   
-  @keyframes fadeInUpAnime{
+  @keyframes fadeInUpTitleAnime{
     from {
       opacity: 0;
     transform: translateY(30px);
@@ -28,3 +37,4 @@ Fade in up
     transform: translateY(0);
     }
   }
+

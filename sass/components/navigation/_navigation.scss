@@ -112,14 +112,12 @@
 /* Added for Boldly Built */
 
 .site-header {
-	background-color: $grey;
+	background-color: transparent;
 	position: fixed;
 	left: 0;
 	right: 0;
 	z-index: 999;
-	.current_page_item a{
-		color: $blue;
-	}
+
 }
 .header-menu-wrapper {
 	display: flex;
@@ -141,6 +139,7 @@
 	.site-menu {
 		display: flex;
 		flex-direction: row-reverse;
+		align-items: center;
 	}
 	// reset default style for button
 	button {
@@ -155,7 +154,7 @@
 		border: 1px solid $white;
 		color: $white;
 		border-radius: unset;
-		padding: .5rem 1rem;
+		padding: .5rem 1.5rem;
 	}
 
 }
@@ -168,6 +167,35 @@
 // 	background-color: transparent;
 // 	border: none;
 // }
+
+// underline animation
+.header-menu-wrapper {
+	.current_page_item a{
+		color: $grey;
+	}
+	li a {
+		position: relative;
+		&:after {
+			content: '';
+			// line position
+			position: absolute;
+			bottom: 0;
+			left: 15%;
+			// line style
+			width: 70%;
+			height: 1px;
+			background:$white;
+			// animation
+			transition: all .3s;
+			transform: scale(0,1); // 0 to x axis and 1 to y axis
+			transform-origin: left top; // start from left
+		}
+		&:hover::after {
+			transform: scale(1,1);
+		}
+	}
+
+}
 
 // style drop down menu
 .main-navigation ul {
@@ -183,7 +211,8 @@
 		font-weight: 700;
 		font-size: $font__mobile_nav_links;
 		display: block;
-		padding: 0.75rem 1.25rem;
+		padding: 0 1.25rem;
+		margin: 1rem auto;
 		text-align: center;
 		// text-transform: uppercase;
 	}
@@ -201,6 +230,7 @@
 		background-color: unset;
 		a {
 			font-size: $font__desktop_nav_links;
+			margin: reset;
 		}
 	}
 

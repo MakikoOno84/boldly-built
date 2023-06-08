@@ -15,13 +15,3 @@ jQuery('.fadeInUpTrigger').on('inview', function(event, isInView) {
         jQuery(this).removeClass(classNames);//remove class name
     }
   });
-
-  jQuery('.zoomOutImgTrigger').on('inview', function(event, isInView) {
-    // classNames='animate__animated animate__fadeInUp change-time';//animate.css
-    classNames='zoomOutImg';//css
-    if (isInView) {//when an element is in view
-        jQuery(this).addClass(classNames);//add class name
-    } else {//when an element is out of view
-        jQuery(this).removeClass(classNames);//remove class name
-    }
-  });

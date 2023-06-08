@@ -40,23 +40,23 @@ get_header();
 								<h2><?php echo $serviceTitle ?></h2>
 								<p><?php echo $serviceDescription ?></p>
 								<div class="service-wrapper">
-									<div class='service-block'>
+									<div class='service-block animate__animated'>
 										<?php echo wp_get_attachment_image( $service1Img, 'medium') ?>
 										<p><?php echo $service1 ?></p>
 									</div>
 
-									<div class='service-block'>
+									<div class='service-block animate__animated change-delay-200ms'>
 										<?php echo wp_get_attachment_image( $service2Img, 'medium') ?>
 										<p><?php echo $service2 ?></p>
 									</div>
 
-									<div class='service-block'>
+									<div class='service-block animate__animated change-delay-400ms'>
 										<?php echo wp_get_attachment_image( $service3Img, 'medium') ?>
 										<p><?php echo $service3 ?></p>
 									</div>
 								</div>
 
-								<a class="expertise-button"href="<?php echo $serviceMoreInfo ?>">More Info</a>
+								<a class="expertise-button animate__animated"href="<?php echo $serviceMoreInfo ?>">More Info</a>
 
 						<?php endwhile ?>
 					<?php endif ?>
@@ -65,7 +65,7 @@ get_header();
 
 			<section id="home-feature">
 				<?php if ( get_field('featured_title') ) : ?>
-					<h2><?php the_field('featured_title')?></h2>
+					<h2 class="animate__animated"><?php the_field('featured_title')?></h2>
 				<?php endif ?>
 
 				<div class="feature-wrapper">
@@ -73,10 +73,10 @@ get_header();
 						$image = get_field('project_image');
 						$size = 'large'; 
 						if( $image ) {
-							echo wp_get_attachment_image( $image, $size );
+							echo wp_get_attachment_image( $image, $size ,'',array('class'=>'animate__animated'));
 						}
 					?>
-					<div class="descr-box">
+					<div class="descr-box animate__animated change-delay-200ms">
 						<?php if ( get_field('project_title') ) : ?>
 							<h3><?php the_field('project_title')?></h3>
 						<?php endif ?>
