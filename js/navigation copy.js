@@ -7,15 +7,13 @@
 ( function() {
 	const siteNavigation = document.getElementById( 'site-navigation' );
 
-	const menuMobile = document.getElementById('menu-wrapper-mobile');
-
 	// Return early if the navigation doesn't exist.
 	if ( ! siteNavigation ) {
 		console.log("the navigation doesn't exist.");
 		return;
 	}
 
-	const button = document.getElementById( 'menu-button' );
+	const button = siteNavigation.getElementsByTagName( 'button' )[ 0 ];
 
 	// Return early if the button doesn't exist.
 	if ( 'undefined' === typeof button ) {
@@ -39,8 +37,6 @@
 	button.addEventListener( 'click', function() {
 		siteNavigation.classList.toggle( 'toggled' );
 
-		menuMobile.classList.toggle('toggled');
-
 		if ( button.getAttribute( 'aria-expanded' ) === 'true' ) {
 			button.setAttribute( 'aria-expanded', 'false' );
 		} else {
@@ -49,14 +45,14 @@
 	} );
 
 	// Remove the .toggled class and set aria-expanded to false when the user clicks outside the navigation.
-	// document.addEventListener( 'click', function( event ) {
-	// 	const isClickInside = siteNavigation.contains( event.target );
+	document.addEventListener( 'click', function( event ) {
+		const isClickInside = siteNavigation.contains( event.target );
 
-	// 	if ( ! isClickInside ) {
-	// 		siteNavigation.classList.remove( 'toggled' );
-	// 		button.setAttribute( 'aria-expanded', 'false' );
-	// 	}
-	// } );
+		if ( ! isClickInside ) {
+			siteNavigation.classList.remove( 'toggled' );
+			button.setAttribute( 'aria-expanded', 'false' );
+		}
+	} );
 
 	// Get all the link elements within the menu.
 	const links = menu.getElementsByTagName( 'a' );

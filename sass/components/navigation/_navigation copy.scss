@@ -109,10 +109,26 @@
 	}
 }
 
-/* Added for Boltly Built */
+/* Added for Boldly Built */
+
+.header-menu-wrapper.full {
+	display: none;
+}
+
+.site-header {
+	background-color: transparent;
+	position: fixed;
+	left: 0;
+	right: 0;
+	z-index: 999;
+
+}
 .header-menu-wrapper {
-	// background-color: transparent;
-	position: absolute;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
 	left: 0;
 	right: 0;
 	z-index: 999;
@@ -144,36 +160,55 @@
 		border-radius: unset;
 		padding: .5rem 1.5rem;
 	}
-}
-.header-menu-wrapper.full {
-	display: none;
-}
 
-.header-menu-wrapper.mobile {
-	// display: flex;
-	// flex-direction: row;
-	// background-color: $grey;
-	.menu-top {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
+}
+// remove margin on right from button 
+.main-navigation {
+	width: fit-content;
+}
+// reset default style for button
+// .menu-toggle {
+// 	background-color: transparent;
+// 	border: none;
+// }
+
+// underline animation
+.header-menu-wrapper {
+	.current_page_item a{
+		color: $grey;
 	}
-	.menu-top-right {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
+	li a {
+		position: relative;
+		&:after {
+			content: '';
+			// line position
+			position: absolute;
+			bottom: 0;
+			left: 15%;
+			// line style
+			width: 70%;
+			height: 1px;
+			background:$white;
+			// animation
+			transition: all .3s;
+			transform: scale(0,1); // 0 to x axis and 1 to y axis
+			transform-origin: left top; // start from left
+		}
+		&:hover::after {
+			transform: scale(1,1);
+		}
 	}
 
 }
 
 // style drop down menu
 .main-navigation ul {
-	// position: absolute;
-	// top: 6.1rem;
-	// left: 0;
-	// right: 0;
-	// z-index: 999;
-	// background-color: $grey;
+	position: absolute;
+	top: 6.1rem;
+	left: 0;
+	right: 0;
+	z-index: 999;
+	background-color: $grey;
 
 	a {
 		color: $white;
@@ -187,17 +222,9 @@
 	}
 }
 
-.header-menu-wrapper.toggled {
-	@include bggradient;
-	background-color: red;
-	height: 100vh;
-	position: fixed;
-}
-
 @media (min-width: 37.5em) {
-	.header-menu-wrapper.full {
-		display: flex;
-	}
+
+
 	.header-menu-wrapper.mobile {
 		display: none;
 	}
@@ -220,3 +247,4 @@
 		flex-direction: row;
 	}
 }
+
