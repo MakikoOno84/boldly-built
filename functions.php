@@ -222,3 +222,33 @@ function contact_us_img() { ?>
     </style>
 <?php }
 add_action( 'wp_enqueue_scripts', 'contact_us_img' );
+
+/**
+ * Load background image on mobile menu for background css.
+ */
+
+function mobile_menu_bg() {
+	?>
+	<style>
+
+		.header-menu-wrapper.mobile.toggled {			
+		background-image: url(<?php echo get_template_directory_uri()?>/images/mobile-menu-bg.jpeg);
+		background-size:cover;
+		position:relative;
+
+		}
+		.header-menu-wrapper.mobile.toggled::before {
+			content: "";
+			position: absolute;
+			background-color: rgba(0, 45, 98, 0.7);
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			
+		}
+	</style>
+	<?php
+}
+
+add_action('wp_head','mobile_menu_bg');

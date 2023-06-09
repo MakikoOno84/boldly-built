@@ -45,7 +45,7 @@ Gradation
 @mixin bggradient() {
   width: 100%;
   height: 100vh;
-  background:linear-gradient(45deg, #677589,#475F9B,#002d62);/*グラデーションを定義*/
+  background:linear-gradient(45deg,#475F9B,#002d62, #677589);/*グラデーションを定義*/
   background-size: 200% 200%;/*サイズを大きくひきのばす*/
   animation: bggradientAnime 20s ease infinite;
 }
