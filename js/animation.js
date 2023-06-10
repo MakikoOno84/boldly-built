@@ -17,7 +17,7 @@ const appearOptions = {
 const appearOnScroll = new IntersectionObserver(
     function (entries, appearOnScroll) {
         entries.forEach(entry => {
-            console.log(entry);
+            // console.log(entry);
             // set class name to be added based on target
             if (entry.target.classList.contains(targetTitle)) {
                 addClassName = addClassNameOnTitle;

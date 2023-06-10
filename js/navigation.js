@@ -13,7 +13,7 @@
 
 	// Return early if the navigation doesn't exist.
 	if ( ! siteNavigation ) {
-		console.log("the navigation doesn't exist.");
+		// console.log("the navigation doesn't exist.");
 		return;
 	}
 
