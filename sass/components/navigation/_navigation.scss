@@ -111,6 +111,9 @@
 
 /* Added for Boltly Built */
 
+.header-menu-wrapper.mobile .site-menu {
+	display: none;
+}
 .header-menu-wrapper {
 	// background-color: transparent;
 	position: absolute;
@@ -127,7 +130,7 @@
 
 
 	.site-menu {
-		display: none;
+
 
 		&.toggled {
 			display: flex;
@@ -218,6 +221,10 @@
 	position: relative;
 	img {
 		display: block;
+		object-fit: cover;
+		height: 100vh;
+		width: 100vw;
+		// object-position: 50% 10%;
 	}
 }
 .menu-bg-image::after {
@@ -257,6 +264,7 @@
 		justify-content: space-between;
 		.site-menu {
 			margin: 0;
+			display: flex;
 			flex-direction: row;
 			position: unset;
 			align-items: center;
