@@ -107,6 +107,7 @@
 						array(
 							'theme_location' => 'header',
 							'menu_id'        => 'Header Menu',
+							'menu_class' => 'fadeInUpTitleTrigger'
 						)
 					);
 					?>
