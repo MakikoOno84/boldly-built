@@ -96,10 +96,7 @@
 					</button>
 				</div>
 			</div>
-			<div id="menu-bottom" class="site-menu menu-bottom">
-				<div class="menu-bg-image">
-					<img src="<?php echo get_template_directory_uri()?>/images/mobile-menu-bg.jpeg" alt="">
-				</div>
+			<div class="site-menu menu-bottom">
 				<nav id="site-navigation" class="main-navigation">
 					
 					<?php
