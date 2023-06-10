@@ -1,5 +1,5 @@
 const openModalButtons = document.querySelectorAll('.open-modal'),
-      modal = document.querySelector('.modal'),
+      modals = document.querySelectorAll('.modal'),
       closeModalButtons = document.querySelectorAll('.close-modal');
 
 openModalButtons.forEach(openBtn => {
@@ -11,9 +11,18 @@ closeModalButtons.forEach(closeBtn => {
 });
 
 function openModal() {
-  modal.classList.add('visible');
+  console.log("openModal function is called!");
+  console.log(modals);
+  modals.forEach(modal => {
+    modal.classList.add('visible');
+  })
+
 }
 
 function closeModal() {
-  modal.classList.remove('visible');
+  console.log("closeModal function is called!");
+  modals.forEach(modal => {
+    modal.classList.remove('visible');    
+  })
+
 }
