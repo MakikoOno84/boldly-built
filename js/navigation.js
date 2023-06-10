@@ -9,6 +9,8 @@
 
 	const menuMobile = document.getElementById('menu-wrapper-mobile');
 
+	const menuMobileBottom = document.getElementById('menu-bottom');
+
 	// Return early if the navigation doesn't exist.
 	if ( ! siteNavigation ) {
 		console.log("the navigation doesn't exist.");
@@ -40,6 +42,8 @@
 		siteNavigation.classList.toggle( 'toggled' );
 
 		menuMobile.classList.toggle('toggled');
+
+		menuMobileBottom.classList.toggle('toggled');
 
 		if ( button.getAttribute( 'aria-expanded' ) === 'true' ) {
 			button.setAttribute( 'aria-expanded', 'false' );
