@@ -11,6 +11,7 @@
 
 	const menuMobileBottom = document.getElementById('menu-bottom');
 
+
 	// Return early if the navigation doesn't exist.
 	if ( ! siteNavigation ) {
 		// console.log("the navigation doesn't exist.");
@@ -44,6 +45,8 @@
 		menuMobile.classList.toggle('toggled');
 
 		menuMobileBottom.classList.toggle('toggled');
+
+		button.classList.toggle('active');
 
 		if ( button.getAttribute( 'aria-expanded' ) === 'true' ) {
 			button.setAttribute( 'aria-expanded', 'false' );

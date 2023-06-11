@@ -11,8 +11,6 @@ closeModalButtons.forEach(closeBtn => {
 });
 
 function openModal() {
-  console.log("openModal function is called!");
-  console.log(modals);
   modals.forEach(modal => {
     modal.classList.add('visible');
   })
@@ -20,7 +18,6 @@ function openModal() {
 }
 
 function closeModal() {
-  console.log("closeModal function is called!");
   modals.forEach(modal => {
     modal.classList.remove('visible');    
   })

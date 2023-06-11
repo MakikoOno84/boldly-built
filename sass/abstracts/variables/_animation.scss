@@ -7,17 +7,6 @@ Fade in up
 	opacity: 0;
 }
 
-.change-time{  
-    animation-duration: 1s;
-  }
-
-.change-delay-200ms {
-  animation-delay: 200ms;
-}
-.change-delay-400ms {
-  animation-delay: 400ms;
-}
-
 .fadeInUpTitle{
   animation-name:fadeInUpTitleAnime;
   animation-duration:1s;
@@ -37,6 +26,21 @@ Fade in up
     transform: translateY(0);
     }
   }
+
+  .change-time{  
+    animation-duration: 1s;
+  }
+
+.change-delay-200ms {
+  animation-delay: 200ms;
+}
+.change-delay-400ms {
+  animation-delay: 400ms;
+}
+
+.change-delay-800ms {
+  animation-delay: 800ms;
+}
 
 /* ----------------------
 Gradation
