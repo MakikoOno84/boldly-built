@@ -239,15 +239,17 @@
 }
 
 // mobile menu background image animation
-.menu-bg-image img {
-	animation: mobileMenuBackgroundAnime 1.3s  ease-in-out;
+.menu-bg-image {
+	animation: mobileMenuBackgroundAnime 600ms  ease-out;
 }
 
 @keyframes mobileMenuBackgroundAnime{
 	0% {
+		opacity: 0;
 		transform: scale(1.1);
 	}
 	100% {
+		opacity: 1;
 		transform: scale(1);
 	}
 }
