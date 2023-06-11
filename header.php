@@ -89,11 +89,14 @@
 						</section>
 					</section>
 					<button id="menu-button" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-								<span class="screen-reader-text"><?php esc_html_e( 'Menu', 'project-nc' ); ?></span>
-								<?php get_template_part('images/hamburger', 'menu-thin'); ?>
+						<span></span><span></span>
+					</button>
+					<!-- <button id="menu-button" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+								<span class="screen-reader-text"><?php //esc_html_e( 'Menu', 'project-nc' ); ?></span>
+								<?php //get_template_part('images/hamburger', 'menu-thin'); ?>
 								<path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"/>
 								</svg>
-					</button>
+					</button> -->
 				</div>
 			</div>
 			<div id="menu-bottom" class="site-menu menu-bottom">
