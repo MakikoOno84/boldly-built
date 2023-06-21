@@ -37,7 +37,7 @@ get_header();
 									$service3Img	  	= get_sub_field('service_3_image'); 
 									$serviceMoreInfo	= get_sub_field('service_more_info')?>
 
-								<h2><?php echo $serviceTitle ?></h2>
+								<h2><?php echo $serviceTitle ?>.</h2>
 								<p><?php echo $serviceDescription ?></p>
 								<div class="service-wrapper">
 									<div class='service-block animate__animated'>
