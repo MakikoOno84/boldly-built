@@ -1,4 +1,10 @@
 #home-expertise {
+    h2 {
+        font-size: 3rem;
+    }
+    p {
+        font-size: 1.25rem;
+    }
     p,
     h2 {
         text-align: center;
@@ -104,6 +110,7 @@
         box-shadow: rgba(0, 0, 0, 0.2) 0 15px 30px -5px;
 
     }
+
     a:hover, a:active {
         background-color: $blue;
         color: $white;
@@ -111,19 +118,27 @@
         }
 }
 
-@media (min-width: 600px) {
-.descr-box {
-background-color: $lightGrey;
-padding: 3em;
-margin-top: 1em;
-border-radius: 1em; 
-   
-}
-   
-    
+@media (min-width: 37.5em) {
+    .descr-box {
+    background-color: $lightGrey;
+    padding: 3em;
+    margin-top: 1em;
+    border-radius: 1em; 
+    }
 }
 
-@media (min-width: 1200px) {
+@media(min-width: 64em) {
+    #home-expertise {
+        h2 {
+            font-size: 5rem;
+        }
+        p {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+@media (min-width: 75em) {
     .feature-wrapper {
         display: grid;
         grid-template-columns: repeat(10, 1fr);
