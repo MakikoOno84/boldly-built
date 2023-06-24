@@ -110,7 +110,7 @@
 						array(
 							'theme_location' => 'header',
 							'menu_id'        => 'Header Menu',
-							'menu_class' => 'fadeInUpTitleTrigger change-delay-800ms'
+							'menu_class' => 'fadeInUpTitleTrigger change-delay-400ms'
 						)
 					);
 					?>
