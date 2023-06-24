@@ -153,7 +153,9 @@ function boldly_built_scripts() {
 	wp_enqueue_script( 'boldly-built-modal', get_template_directory_uri() . '/js/modal.js', array(), _S_VERSION, true );
 
 	// loading google fonts
-	wp_enqueue_style( 'boldly-built-fonts', 'https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@700;900&family=Alegreya:ital@0;1&display=swap', array(), null );
+	// wp_enqueue_style( 'boldly-built-fonts', 'https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@700;900&family=Alegreya:ital@0;1&display=swap', array(), null );
+	wp_enqueue_style( 'boldly-built-fonts', 'https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;700;900&family=Open+Sans:wght@500;700&family=PT+Sans&display=swap', array(), null );
+
 
 	// loading Animate.css
 	wp_enqueue_style( 'boldly-built-animate-css', 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css' );

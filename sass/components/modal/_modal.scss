@@ -4,6 +4,8 @@
     align-items: center;
     display: none;
     transition: all 0.3s ease;
+    transition-delay: 1s;
+    
     .modal-backdrop {
       background: rgba(#000, 0.7);
       height: 190%;
@@ -58,6 +60,7 @@
   
         &:hover {
           color: #000;
+          cursor: pointer;
         }
       }
     }
@@ -65,48 +68,48 @@
     .modal-body {
       padding: 0 1.5rem;
     }
+    @keyframes showNav {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
   
     &.visible {
-display: block;
+      display: block;
+      animation: showNav 350ms ease-in-out both;
+
     }
   }
   
   .wpcf7-form textarea{ 
     width: 100% !important;
-    height:5em;
+    height:6em;
 }
 
 .wpcf7 input[type="submit"] {
-    display: block;
+  display: block;
     text-align: center;
-    background-color: $white;
-    border: 1px solid $blue;
-    color: $blue;
-    width: 7em;
-    padding: 0.5em;
-    margin:  auto;
+    background-color: $lightBlue;
+    color: $white;
+    width: 8em;
+    padding: 1em;
+    margin: 0 auto;
     text-decoration: none;
-    border-radius: unset;
+    border-radius: 0.7em;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 15px 30px -5px;
 }
+
 .wpcf7 input:hover[type="submit"] {
   background-color: $blue;
   color: $white;
-  transition: all 0.4s ease 0s;
+  transition: 0.8s;
+  cursor: pointer;
 }
+
 .wpcf7 input:active[type="submit"] {
   background-color: $blue;
   color: $white;
+  transition: 0.8s;
 }
-
-//     display: block;
-//     text-align: center;
-//     border: 1px solid $blue;
-//     color: $blue;
-//     width: 7em;
-//     padding: 0.5em;
-//     margin: 2em auto;
-//     text-decoration: none;
-// } 
 
 // breakpoint at 600px
 @media (min-width: 37.5rem) {
