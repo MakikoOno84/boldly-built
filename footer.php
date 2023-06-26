@@ -26,7 +26,7 @@
 
 			<div class="footer-border"></div>
 			<div class="footer-bottom">
-				<p class='copyright'><?php esc_html_e('Copyright &copy; 2023 Boldy Built Media','boldly-built');?></p>
+				<p class='copyright'><?php esc_html_e('&copy; 2023 Boldy Built Media','boldly-built');?></p>
 
 				<nav class='footer-menu bottom'>
 				<?php
