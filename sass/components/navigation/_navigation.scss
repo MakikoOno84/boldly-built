@@ -184,6 +184,9 @@
 		flex-direction: row;
 		align-items: center;
 	}
+	.main-navigation li {
+		margin-bottom:2rem;
+	}
 
 }
 
@@ -271,6 +274,9 @@
 			position: unset;
 			align-items: center;
 		}
+		.open-modal {
+			margin-left: 2rem;
+		}
 	}
 	.header-menu-wrapper.mobile {
 		display: none;
@@ -284,6 +290,7 @@
 		display: flex;
 		position: unset;
 		background-color: unset;
+		gap: 2rem;
 		a {
 			font-size: $font__desktop_nav_links;
 			margin: reset;
