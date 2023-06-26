@@ -65,7 +65,7 @@ get_header();
 						// $default_attr = array("class" => "zoomOut");
 						if( $image ) {
 							?><div class="floating-bottom">
-								<div class="animate__animated"><?php
+								<div class="about-image animate__animated"><?php
 								echo wp_get_attachment_image( $image, $size );
 								?></div>
 							</div><?php
