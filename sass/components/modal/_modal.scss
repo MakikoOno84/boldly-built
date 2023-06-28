@@ -27,7 +27,7 @@
       transition: all 0.6s ease;
       z-index: 1000;
       position: fixed;
-      max-height: 40rem  ; // 556px
+      max-height: 42rem  ; // 556px
       // left: 50%;
       // top:-300%;
       // transform: translate(-50%, 60%);
@@ -57,6 +57,8 @@
         height: 30px;
         width: 50px;
         text-align: center;
+        position: absolute;
+        right: 0.8rem;
   
         &:hover {
           color: #000;
