@@ -262,8 +262,8 @@
 	position: absolute;
 	margin: 0 1rem;
 }
-
-@media (min-width: 37.5em) {
+// breakpoint at 700px
+@media (min-width: 43.75em) {
 	.header-menu-wrapper.full {
 		display: flex;
 		justify-content: space-between;
@@ -346,3 +346,41 @@
     transform: translateY(-6px) rotate(45deg);
     width: 50%;
 }
+
+// line animation on menu item
+
+.main-navigation {
+	.menu li a{
+	  position: relative;
+	  padding: 0 1rem;
+	}
+	
+	.menu li:not(.current-menu-item) a:hover{
+	  color:$grey;
+	}
+	
+	.menu li a::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		// line style
+		width: 100%;
+		height: 1px;
+		background:$grey;
+		// animation
+		transition: all .3s;
+		transform: scale(0, 1);/*X 0、Y 1*/
+		transform-origin: left top;
+	}
+	
+	.menu li.current-menu-item a::after {
+		background: $white;
+		transform: scale(1, 1);/*extend a line to X direction*/
+	}
+
+	.menu li a:hover::after {
+		transform: scale(1, 1);/*extend a line to X direction*/
+	}
+}
+
