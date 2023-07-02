@@ -347,40 +347,60 @@
     width: 50%;
 }
 
-// line animation on menu item
+// Single line animation on menu item
+
+// .main-navigation {
+// 	.menu li a{
+// 	  position: relative;
+// 	  padding: 0 1rem;
+// 	}
+	
+// 	.menu li:not(.current-menu-item) a:hover{
+// 	  color:$grey;
+// 	}
+	
+// 	.menu li a::after {
+// 		content: '';
+// 		position: absolute;
+// 		bottom: 0;
+// 		left: 0;
+// 		// line style
+// 		width: 100%;
+// 		height: 1px;
+// 		background:$grey;
+// 		// animation
+// 		transition: all .3s;
+// 		transform: scale(0, 1);/*X 0、Y 1*/
+// 		transform-origin: left top;
+// 	}
+	
+// 	.menu li.current-menu-item a::after {
+// 		background: $white;
+// 		transform: scale(1, 1);/*extend a line to X direction*/
+// 	}
+
+// 	.menu li a:hover::after {
+// 		transform: scale(1, 1);/*extend a line to X direction*/
+// 	}
+// }
+
+// Double line animation on menu item
 
 .main-navigation {
 	.menu li a{
-	  position: relative;
-	  padding: 0 1rem;
-	}
-	
-	.menu li:not(.current-menu-item) a:hover{
-	  color:$grey;
-	}
-	
-	.menu li a::after {
-		content: '';
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		// line style
-		width: 100%;
-		height: 1px;
-		background:$grey;
-		// animation
-		transition: all .3s;
-		transform: scale(0, 1);/*X 0、Y 1*/
-		transform-origin: left top;
-	}
-	
-	.menu li.current-menu-item a::after {
-		background: $white;
-		transform: scale(1, 1);/*extend a line to X direction*/
+		background:
+		linear-gradient(currentColor 0 0) 0 100% /var(--d, 0) 1px no-repeat,
+		linear-gradient(currentColor 0 0) 100% calc(100% - 6px) /var(--d, 0) 1px no-repeat;
+	  transition: 0s 0.5s, background-size 0.5s;
+		}
+	.menu li:not(.current-menu-item) a:hover {
+		--d: 100%;
+		background-position: 0% calc(100% - 3px), 100% calc(100% - 3px);
+		transition: 0.3s, background-position 0.3s 0.3s;
 	}
 
-	.menu li a:hover::after {
-		transform: scale(1, 1);/*extend a line to X direction*/
+	.menu li.current-menu-item a {
+		--d: 100%;
+		background-position: 0% calc(100% - 3px), 100% calc(100% - 3px);
 	}
 }
-
