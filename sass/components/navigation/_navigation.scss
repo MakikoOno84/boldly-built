@@ -110,6 +110,24 @@
 }
 
 /* Added for Boltly Built */
+// Default header background colour
+.header-menu-wrapper {
+	background-color: $blue;
+}
+.menu-top {
+	background-color: $blue;
+}
+// Background colour for home, about, and expertise pages
+.home,
+.page-id-8,
+.page-id-10 {
+	.header-menu-wrapper {
+		background-color: transparent;
+	}
+	.menu-top {
+		background-color: transparent;
+	}
+}
 
 .header-menu-wrapper.mobile .site-menu {
 	display: none;
@@ -176,7 +194,8 @@
 		top: 0;
 		left: 0;
 		right: 0;
-		margin: 0 1rem;
+		// margin: 0 1rem;
+		padding: 0 1rem;
 		z-index: 5;
 	}
 	.menu-top-right {
