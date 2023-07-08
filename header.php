@@ -26,41 +26,43 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'boldly-built' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<div class="header-menu-wrapper full">
-			<div class="site-branding">
-				<?php
-				the_custom_logo();
-				?>
-			</div><!-- .site-branding -->
-
-			<div class="site-menu">
-				<nav class="main-navigation">
+		<div class="header-wrapper">
+			<div class="header-menu-wrapper full">
+				<div class="site-branding">
 					<?php
-					wp_nav_menu(
-						array(
-							'theme_location' => 'header',
-							'menu_id'        => 'Header Menu',
-						)
-					);
+					the_custom_logo();
 					?>
-				</nav><!-- #site-navigation -->
-				<button type='button' class='open-modal'><?php esc_html_e('Contact','boldly-built');?></button>
-				<!-- modal -->
-				<section class="modal">
-					<span class="modal-backdrop"></span>
-					<section class="modal-content">
-					<section class="modal-header">
-      					<h2 class="modal-title">
-						  <?php esc_html_e("Let's chat!",'boldly-built');?>
-							  </h2><button class="close-modal">&times</button>
-    				</section>
-						<section class="modal-body">
-							<?php
-								echo do_shortcode( '[contact-form-7 id="97" title="contact us form"]' );
-							?>
+				</div><!-- .site-branding -->
+
+				<div class="site-menu">
+					<nav class="main-navigation">
+						<?php
+						wp_nav_menu(
+							array(
+								'theme_location' => 'header',
+								'menu_id'        => 'Header Menu',
+							)
+						);
+						?>
+					</nav><!-- #site-navigation -->
+					<button type='button' class='open-modal'><?php esc_html_e('Contact','boldly-built');?></button>
+					<!-- modal -->
+					<section class="modal">
+						<span class="modal-backdrop"></span>
+						<section class="modal-content">
+						<section class="modal-header">
+							<h2 class="modal-title">
+							<?php esc_html_e("Let's chat!",'boldly-built');?>
+								</h2><button class="close-modal">&times</button>
+						</section>
+							<section class="modal-body">
+								<?php
+									echo do_shortcode( '[contact-form-7 id="97" title="contact us form"]' );
+								?>
+							</section>
 						</section>
 					</section>
-				</section>
+				</div>
 			</div>
 		</div>
 		<div id="menu-wrapper-mobile" class="header-menu-wrapper mobile">
