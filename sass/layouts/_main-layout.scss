@@ -6,6 +6,7 @@
 		". main ."
 		". footer .";
 	background-color: $white;
+	min-height: 100vh;
 };
 
 .site-header {
@@ -50,10 +51,18 @@
 .footer-bottom {
 	padding: $padding_page-wrapper ;
 }
-
+@media(min-width: 43.7em) {
+	.page-wrapper {
+		margin: 5rem auto;
+	}
+}
 @media (min-width: 37.5em) {
+	
 	.page-wrapper {
 		max-width: $max-width_page-wrapper;
+	}
+	.header-wrapper {
+		min-height: fit-content;
 	}
 	.header-menu-wrapper,
 	.footer-top,

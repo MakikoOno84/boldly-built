@@ -111,7 +111,7 @@
 
 /* Added for Boltly Built */
 // Default header background colour
-.header-menu-wrapper {
+.header-wrapper {
 	background-color: $blue;
 }
 .menu-top {
@@ -132,12 +132,20 @@
 .header-menu-wrapper.mobile .site-menu {
 	display: none;
 }
+.home,
+.page-id-8, 
+.page-id-10 {
+	.header-menu-wrapper {
+		position: absolute;
+		left: 0;
+		right: 0;
+		z-index: 999;
+	
+	}
+}
+
 .header-menu-wrapper {
 	// background-color: transparent;
-	position: absolute;
-	left: 0;
-	right: 0;
-	z-index: 999;
 	
 	svg {
 		fill: $white;
@@ -234,7 +242,7 @@
 	// @include bggradient;
 	// background-color: red;
 	height: 100vh;
-	position: fixed;
+	// position: fixed;
 
 }
 
@@ -423,3 +431,4 @@
 		background-position: 0% calc(100% - 3px), 100% calc(100% - 3px);
 	}
 }
+
