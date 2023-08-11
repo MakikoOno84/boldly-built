@@ -5,7 +5,7 @@ on:
 name: Build and Deploy  
 jobs:
   FTP-Deploy-Action:
-    name: FTP-Deploy-Action　${{ secrets.FTP_PASSWORD }}     # JOBの名前
+    name: FTP-Deploy-Action     # JOBの名前
     runs-on: ubuntu-latest      # 仮想環境の種類を指定
     steps:
       - uses: actions/checkout@master                   
