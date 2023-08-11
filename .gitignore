@@ -97,4 +97,4 @@ package-lock.json
 
 *.css.map
 *.map
-style.css
+#style.css
