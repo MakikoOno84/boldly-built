@@ -14,6 +14,7 @@ jobs:
         env:                                        
           FTP_SERVER: ${{ secrets.FTP_SERVER }}     
           FTP_USERNAME: ${{ secrets.FTP_USER }} 
-          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }} 
+          #FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }} 
+          FTP_PASSWORD: 4~11(hbg@i11
           LOCAL_DIR: ./                           
           REMOTE_DIR: "./boldlybuilt/wp-content/themes/boldly-built"
